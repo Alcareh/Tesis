@@ -1,0 +1,23 @@
+Quick Start
+
+This package will work as is but it will work much better and is intended to be used with any hdr bloom package along with grid snapping for modularity.
+There is absolutely nothing wrong with using Unity's own free packages accessible via the Unity package manager
+you're looking for the following two packages...
+
+1) start a new project to test
+2) open the package manager and install 'Post Processing' and 'ProGrids' may need to check preview packages if not listed
+3) Import my 'modular Emissive Lighting' package
+4) navigate to scene folder and view demo
+5) Enjoy :)
+
+! NOTE: You must install 'post processing' before importing my package or you will get a bunch of errors, they are easily fixable but its just easier to do it in the right order so it just works.
+
+Of course you should be able to use any 3rd party bloom and grid snapping packages you wish but for the demo scenes I have a post processing volume that was setup for unity's free processing stack
+so if your using 3rd party just delete the post processing gameobject in the scene hierarchy, also the main camera has a post process layer script attached so again if not using unity 's solution then you can remove that too.
+
+The demo scenes are a bit heavy on the bloom, so you will most likely want to tone it down a bit, unless of course the heavy fits your project.
+I did have a problem with the bloom post processing not working which is due to bugs with unity and nothing to do with my package, but updating to the newest version of Unity seemed to fix that.
+You don't need it but If you have Amplify Shader Editor (ASE) you can open the shaders in the node network, also the folder 'ASE Functions' Contains a simple function that I created with ASE to
+use vertex baked AO to act as the tube burnout parameter. This is the only baking I do in my workflow and is literally done instantly with 1 click so it's well worth the extra effort :P
+
+more information on that in the other file "Workflow & Asset info.pdf"

@@ -1,0 +1,203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2872651851254249894
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1815229867838877982, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815229867838877982, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.0453675
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815229867838877982, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.0453687
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815229867838877982, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.0453682
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815229867838877982, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.120079786
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815229867838877982, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5235731
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815229867838877982, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.034280818
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815229867838877982, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999899
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815229867838877982, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000009593479
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815229867838877982, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0044975746
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815229867838877982, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000045741533
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815229867838877982, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815229867838877982, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815229867838877982, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815229868980020751, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_text
+      value: Continuar
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815229869466793983, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_Name
+      value: PressableButtonHoloLens2FINAL (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953919351833955949, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: ButtonPressed.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Intro
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: Torre
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: video
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: Medial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: Lateral
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: LogoDora
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: MensajeFin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: ModoDeJuego
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: BotonEmpezar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: IconoAvanzar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: SujetarArtro
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: VideoIngreso
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: IconoReinicio
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: Inrtroduccion
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: Intercondileo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: MensajePalpar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: MensajeIngreso
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: "Se\xF1alPalpador"
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: IntroduccionLv2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: PosteriorRotula
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: InfoProcedimiento
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: MensajeMotivacion
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: PantallaArtroscopio1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: PantallaArtroscopio2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673716938595777558, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: PantallaArtroscopio3
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478194982320271977, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0092
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478194982320271977, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478194982320271977, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478194982320271977, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478194982320271977, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478194982320271977, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -8.881781e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Intro
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
