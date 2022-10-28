@@ -123,81 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &6119663
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6119664}
-  - component: {fileID: 6119666}
-  - component: {fileID: 6119665}
-  m_Layer: 0
-  m_Name: AlertIcon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &6119664
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6119663}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1266569348}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200.61, y: 0}
-  m_SizeDelta: {x: 31, y: 28}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6119665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6119663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e85dec433af72d84d813df50094e4f0c, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &6119666
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6119663}
-  m_CullTransparentMesh: 1
 --- !u!1 &20911801
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,7 +135,7 @@ GameObject:
   - component: {fileID: 20911804}
   - component: {fileID: 20911803}
   m_Layer: 0
-  m_Name: ErrorText3
+  m_Name: WarningText3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -413,6 +338,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c571479598761084da63a858cc2cc1c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  qDropdown: {fileID: 1633990888}
+  warningText1: {fileID: 2110920630}
+  warningText2: {fileID: 1058491428}
+  warningText3: {fileID: 20911803}
+  warningText4: {fileID: 2077423659}
+  password1: {fileID: 913598419}
+  password2: {fileID: 664394166}
+  eye1: {fileID: 597535538}
+  eye2: {fileID: 709228224}
 --- !u!4 &151451833
 Transform:
   m_ObjectHideFlags: 0
@@ -4956,7 +4890,7 @@ GameObject:
   - component: {fileID: 1058491429}
   - component: {fileID: 1058491428}
   m_Layer: 0
-  m_Name: ErrorText2
+  m_Name: WarningText2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5404,7 +5338,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 705017714}
-  - {fileID: 6119664}
   m_Father: {fileID: 420386457}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9719,7 +9652,7 @@ GameObject:
   - component: {fileID: 2077423660}
   - component: {fileID: 2077423659}
   m_Layer: 0
-  m_Name: ErrorText4
+  m_Name: WarningText4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10336,7 +10269,7 @@ GameObject:
   - component: {fileID: 2110920631}
   - component: {fileID: 2110920630}
   m_Layer: 0
-  m_Name: ErrorText1
+  m_Name: WarningText1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10381,7 +10314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Este usuario no se encuentra registrado
+  m_text: El usuario ya se encuentra registrado.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 22c31a3b94f197b48baba101a1bea546, type: 2}
   m_sharedMaterial: {fileID: -8769200946697405693, guid: 22c31a3b94f197b48baba101a1bea546, type: 2}
