@@ -12,7 +12,7 @@ public class ShowHidePassword : MonoBehaviour
     [SerializeField] private List<Sprite> eyes;
     
 
-    public void ShowHidePasswordMethod()
+    public void ShowHidePasswordMethod() //Cambia el tipo de input para poder leer/ocultar contraseña además de cambiar ícono.
     {
         if (passwordField.contentType == TMP_InputField.ContentType.Password)
         {
@@ -26,6 +26,6 @@ public class ShowHidePassword : MonoBehaviour
             showHideButton.sprite = eyes[1];
             showHideButton.SetNativeSize();
         }
-        passwordField.ForceLabelUpdate();
+        passwordField.ForceLabelUpdate(); //Obliga a actualizar el campo.
     }
 }
