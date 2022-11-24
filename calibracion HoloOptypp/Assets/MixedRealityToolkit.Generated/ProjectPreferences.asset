@@ -13,12 +13,15 @@ MonoBehaviour:
   m_Name: ProjectPreferences
   m_EditorClassIdentifier: 
   boolPreferences:
-    keys: []
-    values: 
+    keys:
+    - _MixedRealityToolkit_Editor_IgnoreSettingsPrompts
+    - MixedRealityToolkit_Editor_RunOptimalConfig
+    values: 0001
   intPreferences:
     keys:
+    - MixedRealityToolkit_Editor_AudioSpatializerCount
     - _MixedRealityToolkit_Editor_ConfiguratorState
-    values: 00000000
+    values: 0000000000000000
   floatPreferences:
     keys: []
     values: []
