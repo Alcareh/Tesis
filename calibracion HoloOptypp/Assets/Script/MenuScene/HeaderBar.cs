@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HeaderBar : MonoBehaviour
 {
-    public void MoverBarra(Vector3 targetPosition,float cambio)
+    public void MoverBarra(Vector3 targetPosition,float cambio) //Empieza el movimiento de la barra dependiendo del target
     {
         StartCoroutine(LerpBarraMenu(targetPosition,cambio));
     }
