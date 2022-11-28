@@ -30,7 +30,11 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject homeGoals;
     [SerializeField] private GameObject homeInventory;
     [SerializeField] private GameObject homeChallenges;
-    
+
+    [Header("Referenncias")] 
+    [SerializeField] private InventoryManager inventoryManager;
+
+  
     public void Inicio()//Cambia a menú inicio
     {
         headerBar.GetComponent<HeaderBar>().MoverBarra(inicioText.transform.position, -10f);
@@ -49,6 +53,9 @@ public class MenuManager : MonoBehaviour
     public void Inventario()//Cambia a menú inventario
     {
         headerBar.GetComponent<HeaderBar>().MoverBarra(inventarioText.transform.position, -10f);
+        Desactivar();
+        homeInventory.SetActive(true);
+        inventoryManager.MostrarAvatares();
     }
     
     public void Retos()//Cambia a menú retos
@@ -61,7 +68,7 @@ public class MenuManager : MonoBehaviour
         //homeMenu.SetActive(false);
         homeMenuOnce.SetActive(false);
         homeGoals.SetActive(false);
-        //homeInventory.SetActive(false);
+        homeInventory.SetActive(false);
         //homeChallenges.SetActive(false);
     }
    
