@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using  TMPro;
 using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
@@ -13,6 +12,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] public TMP_Text logrosText;
     [SerializeField] public TMP_Text inventarioText;
     [SerializeField] public TMP_Text retosText;
+    [SerializeField] public GameObject toastPanel;
 
     [Header("Primera vez avatar")] 
     [SerializeField] private GameObject welcomeOnce;
@@ -23,15 +23,27 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject fakeProfile;
     [SerializeField] private GameObject profileBG;
     [SerializeField] private GameObject profileAvatar;
+
+    [Header("MenuView")] 
+    [SerializeField] private GameObject homeMenu;
+    [SerializeField] private GameObject homeMenuOnce;
+    [SerializeField] private GameObject homeGoals;
+    [SerializeField] private GameObject homeInventory;
+    [SerializeField] private GameObject homeChallenges;
     
     public void Inicio()//Cambia a menú inicio
     {
         headerBar.GetComponent<HeaderBar>().MoverBarra(inicioText.transform.position, -10f);
+        //Check si es la primera vez que ingresa prender WelcomeOnceContainer, de lo contrario solo el container de Inicio
+        Desactivar();
+        homeMenuOnce.SetActive(true);
     }
     
     public void Logros()//Cambia a menú logros
     {
         headerBar.GetComponent<HeaderBar>().MoverBarra(logrosText.transform.position, -10f);
+        Desactivar();
+        homeGoals.SetActive(true);
     }
     
     public void Inventario()//Cambia a menú inventario
@@ -43,7 +55,16 @@ public class MenuManager : MonoBehaviour
     {
         headerBar.GetComponent<HeaderBar>().MoverBarra(retosText.transform.position, -10f);
     }
-    
+
+    public void Desactivar()
+    {
+        //homeMenu.SetActive(false);
+        homeMenuOnce.SetActive(false);
+        homeGoals.SetActive(false);
+        //homeInventory.SetActive(false);
+        //homeChallenges.SetActive(false);
+    }
+   
     public void AceptarAvatarInicio(){
         if (bgContainer.GetComponent<SelectedAvatar>().selectedAvatar!=null&&avatarContainer.GetComponent<SelectedAvatar>().selectedAvatar!=null)
         {
@@ -55,8 +76,8 @@ public class MenuManager : MonoBehaviour
                 fakeProfile.SetActive(false);
             }
             welcomeOnce.SetActive(false);
+        }else{ //Muestra mensaje de error en toast.
+            toastPanel.GetComponent<Animator>().SetTrigger("ActivarToast");
         }
-        //Debería hacer un toast para decir que seleccione al menos uno xdxd
-        Debug.Log("Escoja algo bruto");
     }
 }
