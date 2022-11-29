@@ -380,10 +380,10 @@ RectTransform:
   m_Father: {fileID: 1875087674}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 940, y: -165}
-  m_SizeDelta: {x: 330, y: 330}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &13353419
 MonoBehaviour:
@@ -805,9 +805,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 287774417}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -837,7 +837,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4630a934ca5baf14eb345262b913af16, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d9133fc5967bfa2489a15149dacf7ac8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1169,9 +1169,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 715574996}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1301,9 +1301,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 715574996}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2428,10 +2428,10 @@ RectTransform:
   m_Father: {fileID: 1875087674}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -525}
-  m_SizeDelta: {x: 330, y: 330}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &138385168
 MonoBehaviour:
@@ -2621,9 +2621,9 @@ RectTransform:
   m_Father: {fileID: 1964775274}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 564.28577, y: -81.8945}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &156026681
@@ -3099,9 +3099,9 @@ RectTransform:
   m_Father: {fileID: 1964775274}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 760, y: -81.8945}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &191134608
@@ -4153,7 +4153,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 65, y: 66}
-  m_SizeDelta: {x: 238.082, y: 42.961}
+  m_SizeDelta: {x: 304.147, y: 42.961}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &273300541
 MonoBehaviour:
@@ -4175,7 +4175,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Avatar Novato
+  m_text: Avatar profesional
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a34128f731828544a844a1b1e25a6a1f, type: 2}
   m_sharedMaterial: {fileID: -3403930700337440791, guid: a34128f731828544a844a1b1e25a6a1f, type: 2}
@@ -4440,10 +4440,10 @@ RectTransform:
   m_Father: {fileID: 1875087674}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 580, y: -525}
-  m_SizeDelta: {x: 330, y: 330}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &279183613
 MonoBehaviour:
@@ -4600,6 +4600,20 @@ MonoBehaviour:
   - {fileID: 1765060006}
   - {fileID: 2084046821}
   - {fileID: 493781784}
+  selected2: {fileID: 1134305593}
+  contentObjects:
+  - {fileID: 2012870878}
+  - {fileID: 52261064}
+  - {fileID: 923937714}
+  - {fileID: 1870797741}
+  - {fileID: 1273373338}
+  - {fileID: 2030356231}
+  - {fileID: 1708086512}
+  - {fileID: 2100586541}
+  selectedAvatar2: {fileID: 0}
+  selectedName: 
+  selectedName2: 
+  inventoryManager: {fileID: 1886986316}
 --- !u!114 &287774418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5112,7 +5126,7 @@ GameObject:
   - component: {fileID: 341782241}
   - component: {fileID: 341782240}
   m_Layer: 0
-  m_Name: Selected1
+  m_Name: Selected2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5277,9 +5291,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 944001339}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5309,7 +5323,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 99eaa7f98edf5404f9bccdef23151091, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 253285c390c9c7a49b01177f0b374061, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6009,9 +6023,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 715574996}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6196,7 +6210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &384406599
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6215,9 +6229,9 @@ RectTransform:
   m_Father: {fileID: 1730939921}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -312.83}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 625.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &384406600
@@ -7457,8 +7471,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 653704308}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7889,9 +7903,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 944001339}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7921,7 +7935,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 211b63eb43140894d949a84989e12695, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd36bf052ae55be41b83592b7cb359c0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9029,9 +9043,9 @@ RectTransform:
   m_Father: {fileID: 1964775274}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1151.4286, y: -81.8945}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &538699364
@@ -9401,6 +9415,20 @@ MonoBehaviour:
   - {fileID: 793793018}
   - {fileID: 2135381152}
   - {fileID: 1527585910}
+  selected2: {fileID: 341782238}
+  contentObjects:
+  - {fileID: 1859610479}
+  - {fileID: 1649810850}
+  - {fileID: 713167266}
+  - {fileID: 1147444963}
+  - {fileID: 1089055218}
+  - {fileID: 1980679727}
+  - {fileID: 893888619}
+  - {fileID: 1214205760}
+  selectedAvatar2: {fileID: 0}
+  selectedName: 
+  selectedName2: 
+  inventoryManager: {fileID: 1886986316}
 --- !u!114 &556430377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10440,9 +10468,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 151451832}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: AceptarAvatarInicio
+      - m_Target: {fileID: 1886986316}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: GuardarAvatar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10726,9 +10754,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 715574996}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10789,7 +10817,7 @@ GameObject:
   - component: {fileID: 639153602}
   - component: {fileID: 639153601}
   m_Layer: 0
-  m_Name: Selected1
+  m_Name: Selected2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10994,8 +11022,8 @@ GameObject:
   - component: {fileID: 653704311}
   - component: {fileID: 653704310}
   - component: {fileID: 653704309}
-  - component: {fileID: 653704308}
   - component: {fileID: 653704312}
+  - component: {fileID: 653704308}
   m_Layer: 0
   m_Name: BGPanel
   m_TagString: Untagged
@@ -11040,11 +11068,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 653704306}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a18b0df2eae63a7478dca6e5b2b06a3c, type: 3}
+  m_Script: {fileID: 11500000, guid: d869cc87f5ad4104bbd1b778c59e0ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selected1: {fileID: 1128045292}
-  selectedAvatar: {fileID: 0}
+  bgList: []
+  selected2: {fileID: 1128045292}
+  contentObjects:
+  - {fileID: 984960356}
+  - {fileID: 485280889}
+  - {fileID: 1132203457}
+  - {fileID: 1039672752}
+  - {fileID: 2047219752}
+  - {fileID: 1525220429}
+  - {fileID: 667993434}
+  selectedAvatar2: {fileID: 0}
+  selectedName: 
+  selectedName2: 
+  inventoryManager: {fileID: 0}
 --- !u!114 &653704309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11406,8 +11446,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 653704308}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12019,9 +12059,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 556430376}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12051,7 +12091,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5ba8e118580b5934ea079c55c204227a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 33e77efd6144cd2468aa25edddbe70e1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12130,6 +12170,20 @@ MonoBehaviour:
   - {fileID: 2006292924}
   - {fileID: 1546623423}
   - {fileID: 640478128}
+  selected2: {fileID: 2018393421}
+  contentObjects:
+  - {fileID: 68384268}
+  - {fileID: 2116374819}
+  - {fileID: 636981586}
+  - {fileID: 63679909}
+  - {fileID: 366579949}
+  - {fileID: 917481250}
+  - {fileID: 977478408}
+  - {fileID: 1191482563}
+  selectedAvatar2: {fileID: 0}
+  selectedName: 
+  selectedName2: 
+  inventoryManager: {fileID: 1886986316}
 --- !u!114 &715574997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12201,10 +12255,10 @@ RectTransform:
   m_Father: {fileID: 1875087674}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 580, y: -165}
-  m_SizeDelta: {x: 330, y: 330}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &728945970
 MonoBehaviour:
@@ -14030,9 +14084,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 556430376}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14062,7 +14116,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0790250ce2ec3b745861c253c23a33b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6fb615f0829c05d41a244865390a8ffa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14492,9 +14546,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 715574996}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14624,9 +14678,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 287774417}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14656,7 +14710,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5ba8e118580b5934ea079c55c204227a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8755c6511ec1d524d85a8dbe428f55bb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14735,6 +14789,20 @@ MonoBehaviour:
   - {fileID: 1986662984}
   - {fileID: 340618908}
   - {fileID: 1756887979}
+  selected2: {fileID: 639153599}
+  contentObjects:
+  - {fileID: 495418780}
+  - {fileID: 1880345479}
+  - {fileID: 1688140191}
+  - {fileID: 2087175164}
+  - {fileID: 342231029}
+  - {fileID: 1332038934}
+  - {fileID: 1082359269}
+  - {fileID: 2103530595}
+  selectedAvatar2: {fileID: 0}
+  selectedName: 
+  selectedName2: 
+  inventoryManager: {fileID: 1886986316}
 --- !u!114 &944001340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15164,9 +15232,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 715574996}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15297,8 +15365,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 653704308}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15391,10 +15459,10 @@ RectTransform:
   m_Father: {fileID: 1875087674}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1300, y: -525}
-  m_SizeDelta: {x: 330, y: 330}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &998171362
 MonoBehaviour:
@@ -15525,7 +15593,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 65, y: 66}
-  m_SizeDelta: {x: 238.082, y: 42.961}
+  m_SizeDelta: {x: 254.143, y: 42.961}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &998834169
 MonoBehaviour:
@@ -15547,7 +15615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Avatar Novato
+  m_text: Avatar maestro
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a34128f731828544a844a1b1e25a6a1f, type: 2}
   m_sharedMaterial: {fileID: -3403930700337440791, guid: a34128f731828544a844a1b1e25a6a1f, type: 2}
@@ -16022,8 +16090,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 653704308}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16964,9 +17032,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 944001339}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16996,7 +17064,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0790250ce2ec3b745861c253c23a33b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d36afdf0d62f36440b20ce9c9df858d6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17096,9 +17164,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 556430376}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17128,7 +17196,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 99eaa7f98edf5404f9bccdef23151091, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f0028effa1fefed4e9a73bcd9bb5a6cf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17200,6 +17268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected1: {fileID: 475238264}
   selectedAvatar: {fileID: 0}
+  selectedName: 
 --- !u!114 &1100836619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17715,7 +17784,7 @@ GameObject:
   - component: {fileID: 1128045295}
   - component: {fileID: 1128045294}
   m_Layer: 0
-  m_Name: Selected1
+  m_Name: Selected2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17881,8 +17950,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 653704308}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17943,7 +18012,7 @@ GameObject:
   - component: {fileID: 1134305596}
   - component: {fileID: 1134305595}
   m_Layer: 0
-  m_Name: Selected1
+  m_Name: Selected2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18193,10 +18262,10 @@ RectTransform:
   m_Father: {fileID: 1875087674}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -165}
-  m_SizeDelta: {x: 330, y: 330}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142775168
 MonoBehaviour:
@@ -18374,9 +18443,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 556430376}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18406,7 +18475,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4d58bb3c4bb63bc45b4fc7d30bd27f2a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c91b634fc11e5364ebbe761ca3b03702, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18819,9 +18888,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 715574996}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19277,9 +19346,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 556430376}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19309,7 +19378,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c765fe85eaa16644b929541fa72bc766, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee4400a03114e6e4fa09ad2ba24864f5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19435,9 +19504,9 @@ RectTransform:
   m_Father: {fileID: 1964775274}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 368.57144, y: -81.8945}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1222299079
@@ -20376,9 +20445,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 287774417}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20408,7 +20477,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 99eaa7f98edf5404f9bccdef23151091, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07e1e32072071784d82bfac58bbee284, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20459,9 +20528,9 @@ RectTransform:
   m_Father: {fileID: 1964775274}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1347.143, y: -81.8945}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1285220930
@@ -20730,9 +20799,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 944001339}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20762,7 +20831,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 584c12b27e638c342936f2907bfa62bd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1e65ea63e3654ab4cb627eac89ff0026, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -22804,9 +22873,9 @@ RectTransform:
   m_Father: {fileID: 1964775274}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 172.85712, y: -81.8945}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1482498649
@@ -23252,8 +23321,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 653704308}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24362,7 +24431,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1614685267
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25333,9 +25402,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 556430376}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25365,7 +25434,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4630a934ca5baf14eb345262b913af16, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7fc21a5d66e2a7946b62bc9fa7032585, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -25674,9 +25743,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 944001339}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25706,7 +25775,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5ba8e118580b5934ea079c55c204227a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea6c9f8a900d46e48bd669156e0f113f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -26111,9 +26180,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 287774417}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26143,7 +26212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0790250ce2ec3b745861c253c23a33b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a420b478e01364543be3541e81bcf3cb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27155,10 +27224,10 @@ RectTransform:
   m_Father: {fileID: 1875087674}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1300, y: -165}
-  m_SizeDelta: {x: 330, y: 330}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1761488008
 MonoBehaviour:
@@ -28159,9 +28228,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 556430376}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28191,7 +28260,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 211b63eb43140894d949a84989e12695, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c52385cd09cf4c949a1b5fff09461c16, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -28412,9 +28481,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 287774417}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28444,7 +28513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4d58bb3c4bb63bc45b4fc7d30bd27f2a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ca794fc775cf1c4cb54cef4a47899fe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -28515,7 +28584,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -152.01044}
-  m_SizeDelta: {x: 1520, y: 690}
+  m_SizeDelta: {x: 1520, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1875087675
 MonoBehaviour:
@@ -28850,9 +28919,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 944001339}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28882,7 +28951,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4630a934ca5baf14eb345262b913af16, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f9ee4065f9ddb264d8d8cbe6f3c1b50c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -29308,7 +29377,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 959.1015, y: 0}
-  m_SizeDelta: {x: 1918.203, y: 3877.996}
+  m_SizeDelta: {x: 1918.203, y: 1520}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1886986312
 MonoBehaviour:
@@ -29406,7 +29475,8 @@ MonoBehaviour:
   - {fileID: 287774415}
   - {fileID: 556430374}
   - {fileID: 944001337}
-  numeritoBack: 0
+  menuManager: {fileID: 151451832}
+  numeritoBack: 1
 --- !u!1 &1899442471
 GameObject:
   m_ObjectHideFlags: 0
@@ -29442,7 +29512,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 65, y: 66}
-  m_SizeDelta: {x: 238.082, y: 42.961}
+  m_SizeDelta: {x: 335.018, y: 42.961}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1899442473
 MonoBehaviour:
@@ -29464,7 +29534,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Avatar Novato
+  m_text: Avatar gran leyenda
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a34128f731828544a844a1b1e25a6a1f, type: 2}
   m_sharedMaterial: {fileID: -3403930700337440791, guid: a34128f731828544a844a1b1e25a6a1f, type: 2}
@@ -30184,6 +30254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected1: {fileID: 1042363832}
   selectedAvatar: {fileID: 0}
+  selectedName: 
 --- !u!1 &1980679727
 GameObject:
   m_ObjectHideFlags: 0
@@ -30266,9 +30337,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 556430376}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30298,7 +30369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 584c12b27e638c342936f2907bfa62bd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 65f79c982a6b9b04d8b2c233b51ddaee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -30621,9 +30692,9 @@ RectTransform:
   m_Father: {fileID: 1964775274}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 955.71436, y: -81.8945}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2008492610
@@ -30802,9 +30873,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 287774417}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30834,7 +30905,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 211b63eb43140894d949a84989e12695, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 376d04ab77db3f6429cc7f21602901ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -30865,7 +30936,7 @@ GameObject:
   - component: {fileID: 2018393424}
   - component: {fileID: 2018393423}
   m_Layer: 0
-  m_Name: Selected1
+  m_Name: Selected2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31030,9 +31101,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 287774417}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -31062,7 +31133,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 584c12b27e638c342936f2907bfa62bd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec6ee265cc3b87e458787a550c476e63, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -31163,8 +31234,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 653704308}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -32236,9 +32307,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 944001339}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -32268,7 +32339,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4d58bb3c4bb63bc45b4fc7d30bd27f2a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d7ae5effb5a8a949927a0acd6f4cb43, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -32523,9 +32594,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 287774417}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -32555,7 +32626,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c765fe85eaa16644b929541fa72bc766, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e016c259cdcec46419f49ac0354c7462, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -32655,9 +32726,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 944001339}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -32687,7 +32758,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c765fe85eaa16644b929541fa72bc766, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cd350bf4dd97a0345b8588db8b0a76c0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -33031,9 +33102,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectedAvatar, Assembly-CSharp
-        m_MethodName: SelectedOne
+      - m_Target: {fileID: 715574996}
+        m_TargetAssemblyTypeName: SelectedAvatar2, Assembly-CSharp
+        m_MethodName: SelectedTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33789,10 +33860,10 @@ RectTransform:
   m_Father: {fileID: 1875087674}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 940, y: -525}
-  m_SizeDelta: {x: 330, y: 330}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2141221850
 MonoBehaviour:

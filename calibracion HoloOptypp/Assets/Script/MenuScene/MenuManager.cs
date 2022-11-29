@@ -21,8 +21,8 @@ public class MenuManager : MonoBehaviour
 
     [Header("Profile Info")] 
     [SerializeField] private GameObject fakeProfile;
-    [SerializeField] private GameObject profileBG;
-    [SerializeField] private GameObject profileAvatar;
+    [SerializeField] public GameObject profileBG;
+    [SerializeField] public GameObject profileAvatar;
 
     [Header("MenuView")] 
     [SerializeField] private GameObject homeMenu;
