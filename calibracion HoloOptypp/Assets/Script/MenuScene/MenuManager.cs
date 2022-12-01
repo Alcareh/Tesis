@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using TreeEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,6 +31,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject homeGoals;
     [SerializeField] private GameObject homeInventory;
     [SerializeField] private GameObject homeChallenges;
+    [SerializeField] private GameObject notifyPanel;
 
     [Header("Referenncias")] 
     [SerializeField] private InventoryManager inventoryManager;
@@ -87,6 +89,18 @@ public class MenuManager : MonoBehaviour
             welcomeOnce.SetActive(false);
         }else{ //Muestra mensaje de error en toast.
             toastPanel.GetComponent<Animator>().SetTrigger("ActivarToast");
+        }
+    }
+
+    public void NotifyButton()
+    {
+        if (!notifyPanel.activeSelf)
+        {
+            notifyPanel.SetActive(true);
+        }
+        else
+        {
+            notifyPanel.SetActive(false);
         }
     }
 }
