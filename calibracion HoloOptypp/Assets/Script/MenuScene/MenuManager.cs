@@ -61,6 +61,8 @@ public class MenuManager : MonoBehaviour
     public void Retos()//Cambia a menú retos
     {
         headerBar.GetComponent<HeaderBar>().MoverBarra(retosText.transform.position, -10f);
+        Desactivar();
+        homeChallenges.SetActive(true);
     }
 
     public void Desactivar()
@@ -69,7 +71,7 @@ public class MenuManager : MonoBehaviour
         homeMenuOnce.SetActive(false);
         homeGoals.SetActive(false);
         homeInventory.SetActive(false);
-        //homeChallenges.SetActive(false);
+        homeChallenges.SetActive(false);
     }
    
     public void AceptarAvatarInicio(){
