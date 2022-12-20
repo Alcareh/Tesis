@@ -12,8 +12,9 @@ public class IntroManager : MonoBehaviour
     [SerializeField] private TMPro.TMP_Text warningText2;
     [SerializeField] private TMPro.TMP_Text warningText3;
     [SerializeField] private TMPro.TMP_Text warningText4;
-    [SerializeField] private TMPro.TMP_InputField password1;
-    [SerializeField] private TMPro.TMP_InputField password2;
+    [SerializeField] public TMPro.TMP_InputField name;
+    [SerializeField] public TMPro.TMP_InputField password1;
+    [SerializeField] public TMPro.TMP_InputField password2;
     [SerializeField] private Image eye1;
     [SerializeField] private Image eye2;
 
