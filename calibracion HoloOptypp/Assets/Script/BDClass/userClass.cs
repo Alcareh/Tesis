@@ -8,5 +8,6 @@ public class userClass
     public string name;
     public string mail;
     public string password;
-    public string securityq;
+    public string securityqOp;
+    public string securityqAn;
 }
