@@ -8,8 +8,7 @@ using TMPro;
 
 public class RecoverButtonBND : MonoBehaviour
 {
- 
-    private string host= "http://localhost:3000/user";
+ private string host= "http://localhost:3000/user";
     private WWWForm secureForm;
     public string mail;
     public string securityqOp;
