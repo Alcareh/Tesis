@@ -20,7 +20,7 @@ public class RegisterButtonBND : MonoBehaviour
     public IntroManager introManager;
     
 
-    public async void  EnviarRegistro()
+    public async void  EnviarRegistro() //Trae los datos de los gameobjects a variables y los manda al Task
     {
         nameDB = introManager.nameDB.text;
         mail = introManager.mail.text;

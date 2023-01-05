@@ -1176,6 +1176,7 @@ MonoBehaviour:
   toastPanel: {fileID: 327592748}
   nameDBLogin: {fileID: 1933015668}
   passwordLogin: {fileID: 2081395007}
+  loginPanel: {fileID: 1015447686}
   signUpPanel: {fileID: 1855485219}
   signUpDonePanel: {fileID: 1561314935}
   recoverPanel: {fileID: 384187388}
@@ -1571,7 +1572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &215617717
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4039,7 +4040,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.7
+  m_fontSize: 22
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -15066,7 +15067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1855485220
 RectTransform:
   m_ObjectHideFlags: 0

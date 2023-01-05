@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class userClass
+public class userClass //Clase usuario DB
 {
     public string _id;
     public string name;

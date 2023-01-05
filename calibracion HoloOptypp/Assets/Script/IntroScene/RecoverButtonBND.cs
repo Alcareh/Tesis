@@ -18,7 +18,7 @@ public class RecoverButtonBND : MonoBehaviour
     public IntroManager introManager;
 
     
-    public async void  CheckInfo()
+    public async void  CheckInfo() //Trae los datos de los gameobjects a variables y los manda al Task
     {
         mail = introManager.mailRecover.text;
         securityqOp = introManager.securityqOpRecover.value.ToString();
@@ -38,7 +38,7 @@ public class RecoverButtonBND : MonoBehaviour
         var x = JsonUtility.FromJson<userClass>(temp);
         if (www.error == null)
         {
-            Debug.Log(temp);
+           //Debug.Log(temp);
             introManager.nameDBRecover = x.name;
             introManager._idRecover = x._id;
             introManager.recover1.SetActive(false);

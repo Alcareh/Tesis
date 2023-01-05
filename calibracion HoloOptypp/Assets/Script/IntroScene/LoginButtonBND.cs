@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using Microsoft.MixedReality.Toolkit.Utilities;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class LoginButtonBND : MonoBehaviour 
 {
@@ -16,6 +17,7 @@ public class LoginButtonBND : MonoBehaviour
     [Header("Scripts")]
     public IntroManager introManager;
     
+    //Trae los datos de los gameobjects a variables y los manda al Task
     public async void  EnviarSesion()
     {
         nameDB = introManager.nameDBLogin.text;
@@ -35,12 +37,13 @@ public class LoginButtonBND : MonoBehaviour
         var x = JsonUtility.FromJson<userClass>(temp);
         if (www.error == null)
         {
-            Debug.Log(temp);
+            //Debug.Log(temp);
+            SceneManager.LoadScene("Menu");
             //inicia sesion cambio de escena con carga y user
         }
         else
         {
-            Debug.Log(temp);
+            //Debug.Log(temp);
             introManager.toastPanel.transform.GetChild(0).GetComponent<TMP_Text>().text =
                 "Usuario o contraseña incorrectos";
             introManager.toastPanel.GetComponent<Animator>().SetTrigger("ActivarToast");//no inicia sesion

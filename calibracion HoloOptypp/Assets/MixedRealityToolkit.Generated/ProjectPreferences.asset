@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: ProjectPreferences
   m_EditorClassIdentifier: 
   boolPreferences:
-    keys: []
-    values: 
+    keys:
+    - MixedRealityToolkit_Editor_RunOptimalConfig
+    values: 01
   intPreferences:
     keys:
     - MixedRealityToolkit_Editor_AudioSpatializerCount

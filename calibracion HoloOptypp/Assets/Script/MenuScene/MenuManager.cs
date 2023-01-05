@@ -92,7 +92,7 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    public void NotifyButton()
+    public void NotifyButton() //Apagar y prender el botón de notificaciones
     {
         if (!notifyPanel.activeSelf)
         {

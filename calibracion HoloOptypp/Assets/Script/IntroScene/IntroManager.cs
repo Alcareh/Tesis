@@ -25,6 +25,8 @@ public class IntroManager : MonoBehaviour
     [SerializeField] public TMPro.TMP_InputField nameDBLogin;
     [SerializeField] public TMPro.TMP_InputField passwordLogin;
     
+    [Header("LogIn Panels")]
+    [SerializeField] private GameObject loginPanel;
     [Header("SignIn Panels")]
     [SerializeField] private GameObject signUpPanel;
     [SerializeField] private GameObject signUpDonePanel;
@@ -56,9 +58,9 @@ public class IntroManager : MonoBehaviour
     public UpdateButtonBND updateButtonBND;
 
     
-    public void CheckParameters()
+    public void CheckParameters() //Valida que los campos estén llenos y de manera correcta.
     {
-        List<TMP_Text> listica = new List<TMP_Text>();
+        List<TMP_Text> listica = new List<TMP_Text>(); //Lista para los warnings porque hay 2 clases
         listica.Add(warningText1);
         listica.Add(warningText2);
         listica.Add(warningText3);
@@ -71,19 +73,21 @@ public class IntroManager : MonoBehaviour
             CheckSecurityQOp(securityqOp,warningText5) &&
             CheckSecurityQAn(securityqAn,warningText6))
         {
+            //Sitodo es correcto envía los datos al backend
             registerButtonBND.EnviarRegistro();
         }
     }
- public void CheckAccountRecover()
+ public void CheckAccountRecover() //Valida que los campos estén llenos y de manera correcta.
     {
         if (VerifyEmailAddress(mailRecover,warningText7) &&
             CheckSecurityQOp(securityqOpRecover,warningText8) &&
             CheckSecurityQAn(securityqAnRecover,warningText9))
         {
+            //Sitodo es correcto envía los datos al backend recover 1 (mail, y preguntas de seguridad)
             recoverButtonBND.CheckInfo();
         }
     } 
- public void CheckAccountRecover2()
+ public void CheckAccountRecover2() //Valida que los campos estén llenos y de manera correcta.
  {
         List<TMP_Text> listica = new List<TMP_Text>();
         listica.Add(warningText7);
@@ -93,11 +97,12 @@ public class IntroManager : MonoBehaviour
         listica.Add(warningText11);
         if (CheckPasswords(password1Recover,password2Recover,warningText10,warningText11,listica))
         {
+            //Sitodo es correcto envía los datos al backend recover 2 (envia password y hace update)
             updateButtonBND.CheckInfo();
         }
     }
 
-    public bool CheckName(TMP_InputField checkName,TMP_Text warningText)
+    public bool CheckName(TMP_InputField checkName,TMP_Text warningText) //verifica el nombre y gestiona el warning
     {
         if (checkName.text.Length != 0)
         {
@@ -108,7 +113,7 @@ public class IntroManager : MonoBehaviour
         return false;
     }
     
-    public bool VerifyEmailAddress(TMP_InputField mail,TMP_Text warningText)
+    public bool VerifyEmailAddress(TMP_InputField mail,TMP_Text warningText) //verifica el mail y gestiona el warning
     {
         string[] atCharacter;
         string [] dotCharacter;
@@ -138,6 +143,7 @@ public class IntroManager : MonoBehaviour
 
     
 //[ContextMenu("Check Password")] para checkear en play
+//verifica las contraseñas y gestiona los warnings
     public bool CheckPasswords(TMP_InputField pass1,TMP_InputField pass2,TMP_Text warningTexta,TMP_Text warningTextb,List<TMP_Text> listica) // Verifica que el texto de las contraseñas esté escrito 2 veces igual y cambia colores.
     {
         if (pass1.text!=pass2.text)
@@ -170,6 +176,7 @@ public class IntroManager : MonoBehaviour
         return true;
     }
     
+    //verifica el dropdown y gestiona el warning
     public bool CheckSecurityQOp(TMP_Dropdown securityOp,TMP_Text warningText) //Verifica que el dropdown no se encuentre en opción vacía.
     {
         if (securityOp.value == 0)
@@ -181,7 +188,7 @@ public class IntroManager : MonoBehaviour
         return true;
         
     }
-    
+    //verifica la respuesta del dropdown y gestiona el warning
     public bool CheckSecurityQAn(TMP_InputField securityAn,TMP_Text warningText)
     {
         if (securityAn.text.Length != 0)
@@ -211,17 +218,20 @@ public class IntroManager : MonoBehaviour
         pass2.transform.GetChild(1).GetComponent<Image>().color = whiteColor;
     }
 
+    //Registro correcto, apaga paneles
     public void CorrectSignUp()
     {
         signUpPanel.SetActive(false);
         signUpDonePanel.SetActive(true);
     }
 
+    //Reinicio de recuperar contraseña
     public void RecoverPasswordOff()
     {
         recover1.SetActive(true);
         recover2.SetActive(false);
         recoverPanel.SetActive(false);
+        loginPanel.SetActive(true);
     }
     
 }

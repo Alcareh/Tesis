@@ -18,7 +18,7 @@ public class UpdateButtonBND : MonoBehaviour
     [Header("Scripts")]
     public IntroManager introManager;
     
-    public async void  CheckInfo()
+    public async void  CheckInfo() //Trae los datos de los gameobjects a variables y los manda al Task
     {
         _id = introManager._idRecover;
         nameDB = introManager.nameDBRecover;
@@ -32,22 +32,21 @@ public class UpdateButtonBND : MonoBehaviour
         secureForm = new WWWForm();
         secureForm.AddField("_id", _id);
         secureForm.AddField("password",password);
-        UnityWebRequest www = UnityWebRequest.Post(host+"/update",secureForm);
+        UnityWebRequest www = UnityWebRequest.Post(host+"/PasswordRecover",secureForm);
         await www.SendWebRequest();
         string temp = www.downloadHandler.text;
         var x = JsonUtility.FromJson<userClass>(temp);
         if (www.error == null)
         {
-            Debug.Log(temp);
-            //todogud
+            //Debug.Log(temp);
+            introManager.RecoverPasswordOff();
         }
         else
         {
-            Debug.Log(temp);
-            //todonogud debe ser por falla de conexión o algo
-            /*introManager.toastPanel.transform.GetChild(0).GetComponent<TMP_Text>().text =
-                "Datos incorrectos";
-            introManager.toastPanel.GetComponent<Animator>().SetTrigger("ActivarToast");*/
+            //Debug.Log(temp);
+            introManager.toastPanel.transform.GetChild(0).GetComponent<TMP_Text>().text =
+                "Error al conectar con el servidor";
+            introManager.toastPanel.GetComponent<Animator>().SetTrigger("ActivarToast");
         }
     }
 }

@@ -74,7 +74,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void GuardarAvatar()
+    public void GuardarAvatar() //Cambia los valores viausles del avatar y manda los datos al backend.
     {
         //acá manda datos al backend.
         menuManager.profileBG.GetComponent<Image>().sprite = bgSlot.GetComponent<SelectedAvatar2>().selectedAvatar2;
