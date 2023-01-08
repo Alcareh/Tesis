@@ -8,7 +8,7 @@ using TMPro;
 
 public class UpdateButtonBND : MonoBehaviour
 {
-    private string host= "http://localhost:3000/user";
+    private string host;
     private WWWForm secureForm;
     public string _id;
     public string nameDB;
@@ -17,7 +17,14 @@ public class UpdateButtonBND : MonoBehaviour
     
     [Header("Scripts")]
     public IntroManager introManager;
+    private SesionManager mySesionManager;
     
+    
+    private void Start()
+    {
+        mySesionManager = FindObjectOfType<SesionManager>();
+        this.host = mySesionManager.host;
+    }
     public async void  CheckInfo() //Trae los datos de los gameobjects a variables y los manda al Task
     {
         _id = introManager._idRecover;
@@ -32,13 +39,16 @@ public class UpdateButtonBND : MonoBehaviour
         secureForm = new WWWForm();
         secureForm.AddField("_id", _id);
         secureForm.AddField("password",password);
-        UnityWebRequest www = UnityWebRequest.Post(host+"/PasswordRecover",secureForm);
+        UnityWebRequest www = UnityWebRequest.Post(host+"/updateData",secureForm);
         await www.SendWebRequest();
         string temp = www.downloadHandler.text;
         var x = JsonUtility.FromJson<userClass>(temp);
         if (www.error == null)
         {
             //Debug.Log(temp);
+            introManager.toastPanel.transform.GetChild(0).GetComponent<TMP_Text>().text =
+                "Datos actualizados correctamente";
+            introManager.toastPanel.GetComponent<Animator>().SetTrigger("ActivarToast");
             introManager.RecoverPasswordOff();
         }
         else

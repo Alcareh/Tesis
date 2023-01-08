@@ -9,13 +9,21 @@ using UnityEngine.SceneManagement;
 
 public class LoginButtonBND : MonoBehaviour 
 {
-    private string host= "http://localhost:3000/user";
+    private string host;
     private WWWForm secureForm;
     public string nameDB;
     public string password;
     
     [Header("Scripts")]
     public IntroManager introManager;
+    private SesionManager mySesionManager;
+    
+    
+    private void Start()
+    {
+        mySesionManager = FindObjectOfType<SesionManager>();
+        this.host = mySesionManager.host;
+    }
     
     //Trae los datos de los gameobjects a variables y los manda al Task
     public async void  EnviarSesion()
@@ -38,6 +46,8 @@ public class LoginButtonBND : MonoBehaviour
         if (www.error == null)
         {
             //Debug.Log(temp);
+            mySesionManager._id = x._id;
+            mySesionManager.name = name;
             SceneManager.LoadScene("Menu");
             //inicia sesion cambio de escena con carga y user
         }

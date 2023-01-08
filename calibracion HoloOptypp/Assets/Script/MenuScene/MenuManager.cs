@@ -17,6 +17,7 @@ public class MenuManager : MonoBehaviour
 
     [Header("Primera vez avatar")] 
     [SerializeField] private GameObject welcomeOnce;
+    [SerializeField] private TMP_Text userNameText1;
     [SerializeField] private GameObject bgContainer;
     [SerializeField] private GameObject avatarContainer;
 
@@ -35,8 +36,8 @@ public class MenuManager : MonoBehaviour
 
     [Header("Referenncias")] 
     [SerializeField] private InventoryManager inventoryManager;
+    [SerializeField] private ChargeDataBND chargeDataBND;
 
-  
     public void Inicio()//Cambia a menú inicio
     {
         headerBar.GetComponent<HeaderBar>().MoverBarra(inicioText.transform.position, -10f);
@@ -103,4 +104,16 @@ public class MenuManager : MonoBehaviour
             notifyPanel.SetActive(false);
         }
     }
+
+    public void FirstChargeData(bool newAcc)
+    {
+        if (newAcc)
+        {
+            welcomeOnce.SetActive(true);
+            userNameText1.text = "Bienvenid@ "+chargeDataBND.name;
+    
+        }
+    }
+    
+    
 }

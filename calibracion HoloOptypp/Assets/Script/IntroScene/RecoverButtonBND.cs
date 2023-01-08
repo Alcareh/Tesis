@@ -8,7 +8,7 @@ using TMPro;
 
 public class RecoverButtonBND : MonoBehaviour
 {
- private string host= "http://localhost:3000/user";
+ private string host;
     private WWWForm secureForm;
     public string mail;
     public string securityqOp;
@@ -16,7 +16,14 @@ public class RecoverButtonBND : MonoBehaviour
     
     [Header("Scripts")]
     public IntroManager introManager;
-
+    private SesionManager mySesionManager;
+    
+    
+    private void Start()
+    {
+        mySesionManager = FindObjectOfType<SesionManager>();
+        this.host = mySesionManager.host;
+    }
     
     public async void  CheckInfo() //Trae los datos de los gameobjects a variables y los manda al Task
     {

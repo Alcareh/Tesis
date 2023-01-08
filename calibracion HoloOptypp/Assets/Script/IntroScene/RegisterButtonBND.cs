@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class RegisterButtonBND : MonoBehaviour
 {
-    private string host= "http://localhost:3000/user";
+    private string host;
     private WWWForm secureForm;
     public string nameDB;
     public string mail;
@@ -18,7 +18,14 @@ public class RegisterButtonBND : MonoBehaviour
     
     [Header("Scripts")]
     public IntroManager introManager;
+    private SesionManager mySesionManager;
     
+    
+    private void Start()
+    {
+        mySesionManager = FindObjectOfType<SesionManager>();
+        this.host = mySesionManager.host;
+    }
 
     public async void  EnviarRegistro() //Trae los datos de los gameobjects a variables y los manda al Task
     {

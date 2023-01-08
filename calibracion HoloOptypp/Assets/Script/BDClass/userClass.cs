@@ -10,4 +10,5 @@ public class userClass //Clase usuario DB
     public string password;
     public string securityqOp;
     public string securityqAn;
+    public bool newAccount;
 }

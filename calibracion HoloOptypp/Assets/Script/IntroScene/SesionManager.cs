@@ -10,6 +10,7 @@ public class SesionManager : MonoBehaviour
     public static SesionManager inst;
     public string _id;
     public string nombre;
+    public string host="http://localhost:3000/user";
 
     
     
