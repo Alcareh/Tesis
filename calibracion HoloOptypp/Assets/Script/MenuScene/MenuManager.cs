@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -25,6 +26,22 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject fakeProfile;
     [SerializeField] public GameObject profileBG;
     [SerializeField] public GameObject profileAvatar;
+    [SerializeField] public TMP_Text profileName;
+    [SerializeField] public GameObject profileLvlImg;
+    [SerializeField] public TMP_Text profileLvlTxt;
+    [SerializeField] public GameObject profileProgressImg;
+    [SerializeField] public TMP_Text profileProgressTxt;
+    [SerializeField] public GameObject profileHabilityImg;
+    [SerializeField] public TMP_Text profileHabilityTxt;
+    [SerializeField] public TMP_Text profilePoints;
+    [SerializeField] public GameObject profileNotify;
+    [SerializeField] public List<Sprite> spritesBG;
+    [SerializeField] public List<Sprite> spritesAvatar;
+    [SerializeField] public List<Sprite> spritesGoal;
+    [SerializeField] public List<String> nameLvl;
+    
+    
+    
 
     [Header("MenuView")] 
     [SerializeField] private GameObject homeMenu;
@@ -43,7 +60,14 @@ public class MenuManager : MonoBehaviour
         headerBar.GetComponent<HeaderBar>().MoverBarra(inicioText.transform.position, -10f);
         //Check si es la primera vez que ingresa prender WelcomeOnceContainer, de lo contrario solo el container de Inicio
         Desactivar();
-        homeMenuOnce.SetActive(true);
+        if (chargeDataBND.newAccount)
+        {
+            homeMenuOnce.SetActive(true);
+        }
+        else
+        {
+            homeMenu.SetActive(true);
+        }
     }
     
     public void Logros()//Cambia a menú logros
@@ -70,7 +94,7 @@ public class MenuManager : MonoBehaviour
 
     public void Desactivar()
     {
-        //homeMenu.SetActive(false);
+        homeMenu.SetActive(false);
         homeMenuOnce.SetActive(false);
         homeGoals.SetActive(false);
         homeInventory.SetActive(false);
@@ -80,15 +104,12 @@ public class MenuManager : MonoBehaviour
     public void AceptarAvatarInicio(){
         if (bgContainer.GetComponent<SelectedAvatar>().selectedAvatar!=null&&avatarContainer.GetComponent<SelectedAvatar>().selectedAvatar!=null)
         {
-            profileBG.GetComponent<Image>().sprite = bgContainer.GetComponent<SelectedAvatar>().selectedAvatar;
-            profileAvatar.GetComponent<Image>().sprite = avatarContainer.GetComponent<SelectedAvatar>().selectedAvatar;
-            //Por acá toca mandarle lo datos de selección del usuario al backend.
-            if (fakeProfile.activeSelf)
-            {
-                fakeProfile.SetActive(false);
-            }
+            chargeDataBND.SetFirstAvatar(bgContainer.GetComponent<SelectedAvatar>().selectedName,avatarContainer.GetComponent<SelectedAvatar>().selectedName);
             welcomeOnce.SetActive(false);
+            ChargeData();
         }else{ //Muestra mensaje de error en toast.
+            toastPanel.transform.GetChild(0).GetComponent<TMP_Text>().text =
+                "Selecciona un fondo y un avatar.";
             toastPanel.GetComponent<Animator>().SetTrigger("ActivarToast");
         }
     }
@@ -110,10 +131,47 @@ public class MenuManager : MonoBehaviour
         if (newAcc)
         {
             welcomeOnce.SetActive(true);
-            userNameText1.text = "Bienvenid@ "+chargeDataBND.name;
-    
+            homeMenuOnce.SetActive(true);
+            userNameText1.text = "Bienvenid@ " + chargeDataBND.nameDB;
+        }
+        else
+        {
+            ChargeData();
         }
     }
-    
-    
+
+    public void ChargeData()
+    {
+        homeMenu.SetActive(true);
+        if (fakeProfile.activeSelf)
+        {
+            fakeProfile.SetActive(false);
+        }
+
+        foreach (var picture in spritesBG)
+        {
+            if (chargeDataBND.fondoAvatar==picture.name)
+            {
+                profileBG.GetComponent<Image>().sprite = picture;
+            }
+        }
+        foreach (var picture in spritesAvatar)
+        {
+            if (chargeDataBND.avatarUser==picture.name)
+            {
+                profileAvatar.GetComponent<Image>().sprite = picture;
+            }
+        }
+
+        profileName.text = chargeDataBND.nameDB;
+        profileLvlTxt.text = nameLvl[Int32.Parse(chargeDataBND.nivel) - 1];
+        profileProgressImg.GetComponent<Image>().fillAmount = float.Parse(chargeDataBND.progreso)/100;
+        profileProgressTxt.text = chargeDataBND.progreso;
+        profileHabilityImg.GetComponent<Image>().fillAmount = float.Parse(chargeDataBND.habilidad)/100;
+        profileHabilityTxt.text = chargeDataBND.habilidad;
+        profilePoints.text = chargeDataBND.puntos;
+        profileNotify.SetActive(chargeDataBND.notify);
+        /* 
+          [SerializeField] public GameObject profileLvlImg;*/
+    }
 }

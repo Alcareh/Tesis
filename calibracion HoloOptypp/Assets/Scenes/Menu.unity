@@ -1607,7 +1607,7 @@ GameObject:
   - component: {fileID: 88969091}
   - component: {fileID: 88969090}
   m_Layer: 0
-  m_Name: ProgressTxtNum2Txt
+  m_Name: HabilityTxtNumTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2576,6 +2576,62 @@ MonoBehaviour:
   fakeProfile: {fileID: 1531534349}
   profileBG: {fileID: 1784545612}
   profileAvatar: {fileID: 1393672898}
+  profileName: {fileID: 164913512}
+  profileLvlImg: {fileID: 676687884}
+  profileLvlTxt: {fileID: 1753206502}
+  profileProgressImg: {fileID: 582593011}
+  profileProgressTxt: {fileID: 1252925914}
+  profileHabilityImg: {fileID: 2076503960}
+  profileHabilityTxt: {fileID: 88969090}
+  profilePoints: {fileID: 602004432}
+  profileNotify: {fileID: 1629178075}
+  spritesBG:
+  - {fileID: 21300000, guid: 98c5abe797f406e44a1b0b3ba5127ddd, type: 3}
+  - {fileID: 21300000, guid: 68ed30ab588565043aa2e06c844e98b1, type: 3}
+  - {fileID: 21300000, guid: 583a104ec0e19cc47b35a76994b54740, type: 3}
+  - {fileID: 21300000, guid: 372cdda9c4cd9f84cb975f6199088d9a, type: 3}
+  - {fileID: 21300000, guid: 69003457dfb1c3e43bff43818217f1c9, type: 3}
+  - {fileID: 21300000, guid: c936cbaa975789442a20e50ff4527d17, type: 3}
+  - {fileID: 21300000, guid: c036447a3105a0e49865b50d6a7ab6e0, type: 3}
+  spritesAvatar:
+  - {fileID: 21300000, guid: 211b63eb43140894d949a84989e12695, type: 3}
+  - {fileID: 21300000, guid: 5ba8e118580b5934ea079c55c204227a, type: 3}
+  - {fileID: 21300000, guid: 99eaa7f98edf5404f9bccdef23151091, type: 3}
+  - {fileID: 21300000, guid: 0790250ce2ec3b745861c253c23a33b8, type: 3}
+  - {fileID: 21300000, guid: 4630a934ca5baf14eb345262b913af16, type: 3}
+  - {fileID: 21300000, guid: 4d58bb3c4bb63bc45b4fc7d30bd27f2a, type: 3}
+  - {fileID: 21300000, guid: 584c12b27e638c342936f2907bfa62bd, type: 3}
+  - {fileID: 21300000, guid: c765fe85eaa16644b929541fa72bc766, type: 3}
+  - {fileID: 21300000, guid: 376d04ab77db3f6429cc7f21602901ca, type: 3}
+  - {fileID: 21300000, guid: 8755c6511ec1d524d85a8dbe428f55bb, type: 3}
+  - {fileID: 21300000, guid: 07e1e32072071784d82bfac58bbee284, type: 3}
+  - {fileID: 21300000, guid: a420b478e01364543be3541e81bcf3cb, type: 3}
+  - {fileID: 21300000, guid: d9133fc5967bfa2489a15149dacf7ac8, type: 3}
+  - {fileID: 21300000, guid: 3ca794fc775cf1c4cb54cef4a47899fe, type: 3}
+  - {fileID: 21300000, guid: ec6ee265cc3b87e458787a550c476e63, type: 3}
+  - {fileID: 21300000, guid: e016c259cdcec46419f49ac0354c7462, type: 3}
+  - {fileID: 21300000, guid: c52385cd09cf4c949a1b5fff09461c16, type: 3}
+  - {fileID: 21300000, guid: 33e77efd6144cd2468aa25edddbe70e1, type: 3}
+  - {fileID: 21300000, guid: f0028effa1fefed4e9a73bcd9bb5a6cf, type: 3}
+  - {fileID: 21300000, guid: 6fb615f0829c05d41a244865390a8ffa, type: 3}
+  - {fileID: 21300000, guid: 7fc21a5d66e2a7946b62bc9fa7032585, type: 3}
+  - {fileID: 21300000, guid: c91b634fc11e5364ebbe761ca3b03702, type: 3}
+  - {fileID: 21300000, guid: 65f79c982a6b9b04d8b2c233b51ddaee, type: 3}
+  - {fileID: 21300000, guid: ee4400a03114e6e4fa09ad2ba24864f5, type: 3}
+  - {fileID: 21300000, guid: fd36bf052ae55be41b83592b7cb359c0, type: 3}
+  - {fileID: 21300000, guid: ea6c9f8a900d46e48bd669156e0f113f, type: 3}
+  - {fileID: 21300000, guid: 253285c390c9c7a49b01177f0b374061, type: 3}
+  - {fileID: 21300000, guid: d36afdf0d62f36440b20ce9c9df858d6, type: 3}
+  - {fileID: 21300000, guid: f9ee4065f9ddb264d8d8cbe6f3c1b50c, type: 3}
+  - {fileID: 21300000, guid: 9d7ae5effb5a8a949927a0acd6f4cb43, type: 3}
+  - {fileID: 21300000, guid: 1e65ea63e3654ab4cb627eac89ff0026, type: 3}
+  - {fileID: 21300000, guid: cd350bf4dd97a0345b8588db8b0a76c0, type: 3}
+  spritesGoal: []
+  nameLvl:
+  - Nivel 1 - Novato
+  - Nivel 2 - Profesional
+  - Nivel 3 - Maestro
+  - Nivel 4 - Gran Leyenda
   homeMenu: {fileID: 384406598}
   homeMenuOnce: {fileID: 588887617}
   homeGoals: {fileID: 298970091}
@@ -7887,7 +7943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sesion: 0
   _id: 
-  nombre: 
+  nameDB: 
   host: http://localhost:3000/user
 --- !u!4 &539113382
 Transform:
@@ -8531,7 +8587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &588887618
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8550,9 +8606,9 @@ RectTransform:
   m_Father: {fileID: 1730939921}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 960, y: -312.83}
   m_SizeDelta: {x: 1920, y: 625.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &588887619
@@ -13630,7 +13686,17 @@ MonoBehaviour:
   Sesion: 0
   host: 
   _id: 
-  name: 
+  nameDB: 
+  newAccount: 0
+  fondoAvatar: 
+  avatarUser: 
+  avatarLote: 
+  progreso: 
+  habilidad: 
+  nivel: 
+  puntos: 
+  notify: 0
+  logros: 
   menuManager: {fileID: 151451832}
 --- !u!4 &1017776667
 Transform:

@@ -47,7 +47,8 @@ public class LoginButtonBND : MonoBehaviour
         {
             //Debug.Log(temp);
             mySesionManager._id = x._id;
-            mySesionManager.name = name;
+            mySesionManager.nameDB = name;
+            mySesionManager.Sesion = true;
             SceneManager.LoadScene("Menu");
             //inicia sesion cambio de escena con carga y user
         }
