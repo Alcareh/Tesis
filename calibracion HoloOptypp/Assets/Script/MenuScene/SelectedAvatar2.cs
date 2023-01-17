@@ -14,7 +14,6 @@ public class SelectedAvatar2 : MonoBehaviour
   [SerializeField] public GameObject selected2;
   [SerializeField] public List<GameObject> contentObjects;
   public Sprite selectedAvatar2;
-  public string selectedName;
   public string selectedName2;
   private GameObject selectedBefore;
   
@@ -34,6 +33,7 @@ public class SelectedAvatar2 : MonoBehaviour
     if (actual.CompareTag("Avatar"))
     {
       actual.transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
+      selectedName2 = actual.GetComponent<Image>().sprite.name;
       var localPosition = actual.transform.localPosition;
       selected2.transform.localPosition = localPosition;
     }

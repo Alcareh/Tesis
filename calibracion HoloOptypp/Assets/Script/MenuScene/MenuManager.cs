@@ -5,6 +5,7 @@ using TMPro;
 using TreeEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using Int32 = System.Int32;
 
 public class MenuManager : MonoBehaviour
 {
@@ -39,9 +40,11 @@ public class MenuManager : MonoBehaviour
     [SerializeField] public List<Sprite> spritesAvatar;
     [SerializeField] public List<Sprite> spritesGoal;
     [SerializeField] public List<String> nameLvl;
-    
-    
-    
+
+    [Header("Goal Menu")] 
+    [SerializeField] private List<GameObject> goalsOff;
+    [SerializeField] private List<GameObject> goalsOn;
+
 
     [Header("MenuView")] 
     [SerializeField] private GameObject homeMenu;
@@ -50,6 +53,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject homeInventory;
     [SerializeField] private GameObject homeChallenges;
     [SerializeField] private GameObject notifyPanel;
+    [SerializeField] private GameObject logOutPanel;
 
     [Header("Referenncias")] 
     [SerializeField] private InventoryManager inventoryManager;
@@ -75,6 +79,7 @@ public class MenuManager : MonoBehaviour
         headerBar.GetComponent<HeaderBar>().MoverBarra(logrosText.transform.position, -10f);
         Desactivar();
         homeGoals.SetActive(true);
+        ChargeGoals();
     }
     
     public void Inventario()//Cambia a menú inventario
@@ -82,7 +87,7 @@ public class MenuManager : MonoBehaviour
         headerBar.GetComponent<HeaderBar>().MoverBarra(inventarioText.transform.position, -10f);
         Desactivar();
         homeInventory.SetActive(true);
-        inventoryManager.MostrarAvatares();
+        inventoryManager.MostrarAvatares(chargeDataBND.nivel);
     }
     
     public void Retos()//Cambia a menú retos
@@ -125,6 +130,17 @@ public class MenuManager : MonoBehaviour
             notifyPanel.SetActive(false);
         }
     }
+    public void ProfileButton() //Apagar y prender el botón de notificaciones
+    {
+        if (!logOutPanel.activeSelf)
+        {
+            logOutPanel.SetActive(true);
+        }
+        else
+        {
+            logOutPanel.SetActive(false);
+        }
+    }
 
     public void FirstChargeData(bool newAcc)
     {
@@ -164,6 +180,7 @@ public class MenuManager : MonoBehaviour
         }
 
         profileName.text = chargeDataBND.nameDB;
+        profileLvlImg.GetComponent<Image>().sprite = spritesGoal[Int32.Parse(chargeDataBND.logros)];
         profileLvlTxt.text = nameLvl[Int32.Parse(chargeDataBND.nivel) - 1];
         profileProgressImg.GetComponent<Image>().fillAmount = float.Parse(chargeDataBND.progreso)/100;
         profileProgressTxt.text = chargeDataBND.progreso;
@@ -171,7 +188,16 @@ public class MenuManager : MonoBehaviour
         profileHabilityTxt.text = chargeDataBND.habilidad;
         profilePoints.text = chargeDataBND.puntos;
         profileNotify.SetActive(chargeDataBND.notify);
-        /* 
-          [SerializeField] public GameObject profileLvlImg;*/
     }
+
+    public void ChargeGoals()
+    {
+        for (int i = 0; i <= Int32.Parse(chargeDataBND.logros)-1; i++)
+        {
+            goalsOff[i].SetActive(false);
+            goalsOn[i].SetActive(true);
+        }
+    }
+    
+
 }

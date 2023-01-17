@@ -6,6 +6,7 @@ using TMPro;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class ChargeDataBND : MonoBehaviour
 {
@@ -108,5 +109,10 @@ public class ChargeDataBND : MonoBehaviour
         }
     }
     
+    public void LogOut()
+    {
+        Destroy(mySesionManager);
+        SceneManager.LoadScene("Intro");
+    }
     
 }

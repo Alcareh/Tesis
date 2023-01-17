@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,19 +15,26 @@ public class InventoryManager : MonoBehaviour
 
     [SerializeField] private List<GameObject> avatarSlots;
 
-    [Header("Scripts")] [SerializeField] private MenuManager menuManager;
+    [Header("Scripts")]
+    [SerializeField] private MenuManager menuManager;
+
+    [SerializeField] private ChargeDataBND chargeDataBND;
+
+    [Header("Variables Importantes")] 
+    private string fondoAvatar;
+    private string avatarUser;
 
 
-    [Header("VariablesFictis")] public int numeritoBack;
 
-    public void MostrarAvatares()
+    public void MostrarAvatares(string numeritoBack)
     {
+        numeritoBack=(Int32.Parse(numeritoBack)-1).ToString();
         foreach (var avatarGroup in avatarSlots) //primero los apaga por si entran en dos cuentas diferentes
         {
             avatarGroup.SetActive(false);
         }
 
-        for (int i = 0; i <= numeritoBack; i++) //Prende los que lleguen del backend y ordena el BG
+        for (int i = 0; i <= Int32.Parse(numeritoBack); i++) //Prende los que lleguen del backend y ordena el BG
         {
             avatarSlots[i].SetActive(true);
             avatarSlots[i].GetComponent<SelectedAvatar2>().ActivarOrden();
@@ -65,6 +73,7 @@ public class InventoryManager : MonoBehaviour
     {
         foreach (var avatarGroup in avatarSlots)
         {
+            avatarGroup.GetComponent<SelectedAvatar2>().selectedName2 = "";
             avatarGroup.GetComponent<SelectedAvatar2>().selected2.SetActive(false);
             avatarGroup.GetComponent<SelectedAvatar2>().selectedAvatar2 = null;
             foreach (var avatar in avatarGroup.GetComponent<SelectedAvatar2>().contentObjects)
@@ -77,6 +86,8 @@ public class InventoryManager : MonoBehaviour
     public void GuardarAvatar() //Cambia los valores viausles del avatar y manda los datos al backend.
     {
         //acá manda datos al backend.
+        CheckBGAvatarLote();
+        //chargeDataBND.SetFirstAvatar(bgSlot.GetComponent<SelectedAvatar2>().selectedName,);
         menuManager.profileBG.GetComponent<Image>().sprite = bgSlot.GetComponent<SelectedAvatar2>().selectedAvatar2;
         foreach (var avatarGroup in avatarSlots)
         {
@@ -85,5 +96,18 @@ public class InventoryManager : MonoBehaviour
                 menuManager.profileAvatar.GetComponent<Image>().sprite = avatarGroup.GetComponent<SelectedAvatar2>().selectedAvatar2;
             }
         }
+    }
+
+    public void CheckBGAvatarLote()
+    {
+        fondoAvatar = bgSlot.GetComponent<SelectedAvatar2>().selectedName2;
+        foreach (var avatarGroup in avatarSlots)
+        {
+            if (avatarGroup.GetComponent<SelectedAvatar2>().selectedName2!="")
+            {
+                avatarUser = avatarGroup.GetComponent<SelectedAvatar2>().selectedName2;
+            }
+        }
+        chargeDataBND.SetFirstAvatar(fondoAvatar,avatarUser);
     }
 }
