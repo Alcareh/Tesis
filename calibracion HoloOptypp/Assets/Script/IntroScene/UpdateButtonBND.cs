@@ -39,7 +39,7 @@ public class UpdateButtonBND : MonoBehaviour
         secureForm = new WWWForm();
         secureForm.AddField("_id", _id);
         secureForm.AddField("password",password);
-        UnityWebRequest www = UnityWebRequest.Post(host+"/updateData",secureForm);
+        UnityWebRequest www = UnityWebRequest.Post(host+"user/updateData",secureForm);
         await www.SendWebRequest();
         string temp = www.downloadHandler.text;
         var x = JsonUtility.FromJson<userClass>(temp);

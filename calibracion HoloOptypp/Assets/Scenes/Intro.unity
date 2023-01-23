@@ -3400,8 +3400,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sesion: 0
   _id: 
-  nombre: 
-  host: http://localhost:3000/user
+  nameDB: 
+  host: http://localhost:3000/
 --- !u!4 &405888087
 Transform:
   m_ObjectHideFlags: 0

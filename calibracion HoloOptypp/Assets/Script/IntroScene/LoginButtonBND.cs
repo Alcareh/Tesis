@@ -39,7 +39,7 @@ public class LoginButtonBND : MonoBehaviour
         secureForm = new WWWForm();
         secureForm.AddField("name", name);
         secureForm.AddField("password",password);
-        UnityWebRequest www = UnityWebRequest.Post(host+"/Login",secureForm);
+        UnityWebRequest www = UnityWebRequest.Post(host+"user/Login",secureForm);
         await www.SendWebRequest();
         string temp = www.downloadHandler.text;
         var x = JsonUtility.FromJson<userClass>(temp);

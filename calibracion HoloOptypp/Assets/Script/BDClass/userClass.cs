@@ -13,11 +13,15 @@ public class userClass //Clase usuario DB
     public bool newAccount;
     public string fondoAvatar;
     public string avatarUser;
-    public string avatarLote;
     public string progreso;
     public string habilidad;
     public string nivel;
-    public string puntos;
-    public bool notify;
-    public string logros;
+    public int puntos;
+    public int puntosLvl1Old;
+    public int puntosLvl1New;
+    public int puntosLvl2Old;
+    public int puntosLvl2New;
+    public bool[] notify;
+    public bool notify2;
+    public bool[] logros;
 }

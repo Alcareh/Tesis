@@ -42,7 +42,7 @@ public class RegisterButtonBND : MonoBehaviour
     {
         secureForm = new WWWForm();
         secureForm.AddField("name", name);
-        UnityWebRequest www = UnityWebRequest.Post(host+"/getUserSignUp",secureForm);
+        UnityWebRequest www = UnityWebRequest.Post(host+"user/getUserSignUp",secureForm);
         await www.SendWebRequest();
         string temp = www.downloadHandler.text;
         var x = JsonUtility.FromJson<userClass>(temp);
@@ -66,7 +66,7 @@ public class RegisterButtonBND : MonoBehaviour
         secureForm.AddField("password", password);
         secureForm.AddField("securityqOp", securityqOp);
         secureForm.AddField("securityqAn", securityqAn);
-        UnityWebRequest www = UnityWebRequest.Post(host+"/auth/create",secureForm);
+        UnityWebRequest www = UnityWebRequest.Post(host+"user/auth/create",secureForm);
         await www.SendWebRequest();
         string temp = www.downloadHandler.text;
         var x = JsonUtility.FromJson<userClass>(temp);

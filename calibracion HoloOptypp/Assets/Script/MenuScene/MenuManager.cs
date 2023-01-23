@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using TMPro;
 using TreeEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using Button = UnityEngine.UIElements.Button;
 using Int32 = System.Int32;
 
 public class MenuManager : MonoBehaviour
@@ -14,7 +16,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] public TMP_Text inicioText;
     [SerializeField] public TMP_Text logrosText;
     [SerializeField] public TMP_Text inventarioText;
-    [SerializeField] public TMP_Text retosText;
+    [SerializeField] public TMP_Text progresoText;
     [SerializeField] public GameObject toastPanel;
 
     [Header("Primera vez avatar")] 
@@ -41,19 +43,28 @@ public class MenuManager : MonoBehaviour
     [SerializeField] public List<Sprite> spritesGoal;
     [SerializeField] public List<String> nameLvl;
 
-    [Header("Goal Menu")] 
-    [SerializeField] private List<GameObject> goalsOff;
-    [SerializeField] private List<GameObject> goalsOn;
-
-
-    [Header("MenuView")] 
+    
+    [Header("Header View")] 
     [SerializeField] private GameObject homeMenu;
     [SerializeField] private GameObject homeMenuOnce;
     [SerializeField] private GameObject homeGoals;
     [SerializeField] private GameObject homeInventory;
-    [SerializeField] private GameObject homeChallenges;
-    [SerializeField] private GameObject notifyPanel;
+    [SerializeField] private GameObject homeProgress;
+    [SerializeField] private GameObject[] notifyPanel;
+    [SerializeField] private GameObject notifyGroup;
+    [SerializeField] private GameObject congratPanel;
+    [SerializeField] private TMP_Text congratPanelTxt;
     [SerializeField] private GameObject logOutPanel;
+    
+    [Header("Goal View")] 
+    [SerializeField] private List<GameObject> goalsOff;
+    [SerializeField] private List<GameObject> goalsOn;
+    
+    [Header("Meno View")] 
+    [SerializeField] private List<GameObject> tierList;
+    
+    [Header("Progress View")] 
+    [SerializeField] private List<GameObject> progressItem;
 
     [Header("Referenncias")] 
     [SerializeField] private InventoryManager inventoryManager;
@@ -76,7 +87,7 @@ public class MenuManager : MonoBehaviour
     
     public void Logros()//Cambia a menú logros
     {
-        headerBar.GetComponent<HeaderBar>().MoverBarra(logrosText.transform.position, -10f);
+        headerBar.GetComponent<HeaderBar>().MoverBarra(logrosText.transform.position, -9.5f);
         Desactivar();
         homeGoals.SetActive(true);
         ChargeGoals();
@@ -84,17 +95,18 @@ public class MenuManager : MonoBehaviour
     
     public void Inventario()//Cambia a menú inventario
     {
-        headerBar.GetComponent<HeaderBar>().MoverBarra(inventarioText.transform.position, -10f);
+        headerBar.GetComponent<HeaderBar>().MoverBarra(inventarioText.transform.position, -9f);
         Desactivar();
         homeInventory.SetActive(true);
         inventoryManager.MostrarAvatares(chargeDataBND.nivel);
     }
     
-    public void Retos()//Cambia a menú retos
+    public void Progreso()//Cambia a menú retos
     {
-        headerBar.GetComponent<HeaderBar>().MoverBarra(retosText.transform.position, -10f);
+        headerBar.GetComponent<HeaderBar>().MoverBarra(progresoText.transform.position, -9f);
         Desactivar();
-        homeChallenges.SetActive(true);
+        homeProgress.SetActive(true);
+        ChargeProgress();
     }
 
     public void Desactivar()
@@ -103,7 +115,7 @@ public class MenuManager : MonoBehaviour
         homeMenuOnce.SetActive(false);
         homeGoals.SetActive(false);
         homeInventory.SetActive(false);
-        homeChallenges.SetActive(false);
+        homeProgress.SetActive(false);
     }
    
     public void AceptarAvatarInicio(){
@@ -111,7 +123,7 @@ public class MenuManager : MonoBehaviour
         {
             chargeDataBND.SetFirstAvatar(bgContainer.GetComponent<SelectedAvatar>().selectedName,avatarContainer.GetComponent<SelectedAvatar>().selectedName);
             welcomeOnce.SetActive(false);
-            ChargeData();
+            ChargeHeader();
         }else{ //Muestra mensaje de error en toast.
             toastPanel.transform.GetChild(0).GetComponent<TMP_Text>().text =
                 "Selecciona un fondo y un avatar.";
@@ -121,15 +133,24 @@ public class MenuManager : MonoBehaviour
 
     public void NotifyButton() //Apagar y prender el botón de notificaciones
     {
-        if (!notifyPanel.activeSelf)
+        if (notifyGroup.activeSelf)
         {
-            notifyPanel.SetActive(true);
+            if (profileNotify.activeSelf){
+                chargeDataBND.TurnOffNotification(chargeDataBND._id);
+            }
+            notifyGroup.SetActive(false);
         }
         else
-        {
-            notifyPanel.SetActive(false);
+        { 
+            notifyGroup.SetActive(true);
         }
     }
+
+    public void CongratsDone()
+    {
+        chargeDataBND.TurnOffNotification2(chargeDataBND._id);
+    }
+    
     public void ProfileButton() //Apagar y prender el botón de notificaciones
     {
         if (!logOutPanel.activeSelf)
@@ -152,13 +173,14 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
-            ChargeData();
+            homeMenu.SetActive(true);
+            ChargeHeader();
+            ChargeMenu();
         }
     }
 
-    public void ChargeData()
+    public void ChargeHeader()
     {
-        homeMenu.SetActive(true);
         if (fakeProfile.activeSelf)
         {
             fakeProfile.SetActive(false);
@@ -178,24 +200,107 @@ public class MenuManager : MonoBehaviour
                 profileAvatar.GetComponent<Image>().sprite = picture;
             }
         }
-
         profileName.text = chargeDataBND.nameDB;
-        profileLvlImg.GetComponent<Image>().sprite = spritesGoal[Int32.Parse(chargeDataBND.logros)];
+        for (int i = chargeDataBND.logros.Length - 1; i >= 0; i--)
+        {
+            if (chargeDataBND.logros[i])
+            {
+                profileLvlImg.GetComponent<Image>().sprite = spritesGoal[i+1];
+                break;
+            }
+            
+        }
+        //profileLvlImg.GetComponent<Image>().sprite = spritesGoal[Int32.Parse(chargeDataBND.logros)];
         profileLvlTxt.text = nameLvl[Int32.Parse(chargeDataBND.nivel) - 1];
         profileProgressImg.GetComponent<Image>().fillAmount = float.Parse(chargeDataBND.progreso)/100;
         profileProgressTxt.text = chargeDataBND.progreso;
         profileHabilityImg.GetComponent<Image>().fillAmount = float.Parse(chargeDataBND.habilidad)/100;
         profileHabilityTxt.text = chargeDataBND.habilidad;
-        profilePoints.text = chargeDataBND.puntos;
-        profileNotify.SetActive(chargeDataBND.notify);
+        profilePoints.text = chargeDataBND.puntos.ToString();
+        
+        for (int i = 0; i < chargeDataBND.logros.Length; i++)
+        {
+            if (chargeDataBND.notify[i])
+            {
+                profileNotify.SetActive(true);
+                break;
+            }
+        }
+        
+        if (profileNotify.activeSelf) // Si está prendido el botón rojo cambia la imagen del logro en notifiación
+        {
+            for (int i = 0; i < chargeDataBND.notify.Length; i++)
+            {
+                if (chargeDataBND.notify[i])
+                {
+                    notifyPanel[i].SetActive(true);
+                    notifyPanel[i].transform.GetChild(1).GetComponent<Image>().sprite = spritesGoal[i+1];
+                    notifyPanel[i].transform.GetChild(2).GetComponent<TMP_Text>().text = "Ganaste un nuevo logro";
+                }
+                
+            }
+        }
+
+        if (chargeDataBND.notify2)
+        {
+            congratPanel.SetActive(true);
+            congratPanelTxt.text=nameLvl[Int32.Parse(chargeDataBND.nivel) - 1];
+        }
     }
 
+    public void ChargeMenu()
+    {
+        var data = chargeDataBND.tier.items;
+        for (int i = 0; i < data.Length; i++)
+        {
+            tierList[i].SetActive(true);
+            foreach (var picture in spritesBG)
+            {
+                if (data[i].fondoAvatar==picture.name)
+                {
+                    tierList[i].transform.GetChild(1).GetComponent<Image>().sprite = picture;
+                }
+            }
+            
+            foreach (var picture in spritesAvatar)
+            {
+                if (data[i].avatarUser==picture.name)
+                {
+                    tierList[i].transform.GetChild(2).GetComponent<Image>().sprite = picture;
+                }
+            }
+
+            tierList[i].transform.GetChild(3).GetComponent<TMP_Text>().text = data[i].name;
+            tierList[i].transform.GetChild(4).GetComponent<TMP_Text>().text = data[i].puntos.ToString();
+            
+            TimeSpan time = TimeSpan.FromSeconds(data[i].tiempo);
+            string text = time.ToString(@"mm\:ss");
+            tierList[i].transform.GetChild(5).GetComponent<TMP_Text>().text = (text+" min");
+        }
+    }
     public void ChargeGoals()
     {
-        for (int i = 0; i <= Int32.Parse(chargeDataBND.logros)-1; i++)
+        for (int i = 0; i < chargeDataBND.logros.Length; i++)
         {
-            goalsOff[i].SetActive(false);
-            goalsOn[i].SetActive(true);
+            if (chargeDataBND.logros[i])
+            {
+                goalsOff[i].SetActive(false);
+                goalsOn[i].SetActive(true);
+            }
+        }
+    } 
+    public void ChargeProgress()
+    {
+        var data = chargeDataBND.finalProgress.progresses;
+        for (int i = 0; i < data.Length; i++)
+        {
+            progressItem[i].SetActive(true);
+            progressItem[i].transform.GetChild(6).GetComponent<TMP_Text>().text = data[i].fecha; //tengo que arreglar este formato no sé porque dice año 0001 cuando es 2001
+            progressItem[i].transform.GetChild(7).GetComponent<TMP_Text>().text = data[i].lvl;
+            progressItem[i].transform.GetChild(8).GetComponent<TMP_Text>().text = data[i].puntos.ToString();
+            TimeSpan time = TimeSpan.FromSeconds(data[i].tiempo);
+            string text = time.ToString(@"mm\:ss");
+            progressItem[i].transform.GetChild(9).GetComponent<TMP_Text>().text = (text+" min");
         }
     }
     

@@ -21,9 +21,12 @@ public class SelectedAvatar2 : MonoBehaviour
 
   public void ActivarOrden() //Ordena los BGFijos
   {
-    foreach (var staticBG in bgList)
+    if (!gameObject.CompareTag("BgSlots"))
     {
-      staticBG.GetComponent<BaseBGAvatar>().ordenarFondos();
+      foreach (var staticBG in bgList)
+      {
+        staticBG.GetComponent<BaseBGAvatar>().ordenarFondos();
+      }
     }
   }
 
@@ -34,6 +37,7 @@ public class SelectedAvatar2 : MonoBehaviour
     {
       actual.transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
       selectedName2 = actual.GetComponent<Image>().sprite.name;
+      selectedAvatar2 = actual.GetComponent<Image>().sprite;
       var localPosition = actual.transform.localPosition;
       selected2.transform.localPosition = localPosition;
     }

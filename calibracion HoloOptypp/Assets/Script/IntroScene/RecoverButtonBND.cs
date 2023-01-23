@@ -39,7 +39,7 @@ public class RecoverButtonBND : MonoBehaviour
         secureForm.AddField("mail", mail);
         secureForm.AddField("securityqOp",securityqOp);
         secureForm.AddField("securityqAn",securityqAn);
-        UnityWebRequest www = UnityWebRequest.Post(host+"/CheckRecover",secureForm);
+        UnityWebRequest www = UnityWebRequest.Post(host+"user/CheckRecover",secureForm);
         await www.SendWebRequest();
         string temp = www.downloadHandler.text;
         var x = JsonUtility.FromJson<userClass>(temp);
