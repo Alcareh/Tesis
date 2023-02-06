@@ -77,7 +77,9 @@ public class OptitrackRigidBody : MonoBehaviour
         UpdatePose();
     }
 
-
+/// <summary>
+/// ESTE MÉTODO ES EL QUE DEBO ACTUALIZAR O DE ACÁ ES QUE DEBO SACAR LOS DATOS PARA GUARDARLOS EN EL CSV
+/// </summary>
     void UpdatePose()
     {
         OptitrackRigidBodyState rbState = StreamingClient.GetLatestRigidBodyState( RigidBodyId, NetworkCompensation);
