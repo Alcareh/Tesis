@@ -15,6 +15,8 @@ limitations under the License.
 */
 
 using System;
+using System.IO;
+using System.Text;
 using UnityEngine;
 
 
@@ -23,6 +25,7 @@ using UnityEngine;
 /// </summary>
 public class OptitrackRigidBody : MonoBehaviour
 {
+
     [Tooltip("The object containing the OptiTrackStreamingClient script.")]
     public OptitrackStreamingClient StreamingClient;
 
@@ -31,7 +34,12 @@ public class OptitrackRigidBody : MonoBehaviour
 
     [Tooltip("Subscribes to this asset when using Unicast streaming.")]
     public bool NetworkCompensation = true;
-
+    
+    [SerializeField]   
+    public StringBuilder csv= new StringBuilder();
+    
+    string oldPosition = "0";
+    string oldRotation = "0";
     void Start()
     {
         // If the user didn't explicitly associate a client, find a suitable default.
@@ -83,10 +91,31 @@ public class OptitrackRigidBody : MonoBehaviour
     void UpdatePose()
     {
         OptitrackRigidBodyState rbState = StreamingClient.GetLatestRigidBodyState( RigidBodyId, NetworkCompensation);
-        if ( rbState != null )
+        if (rbState != null)
         {
             this.transform.localPosition = rbState.Pose.Position;
             this.transform.localRotation = rbState.Pose.Orientation;
+            var newPosition = rbState.Pose.Position.ToString();
+            var newRotation = rbState.Pose.Orientation.ToString();
+            if (oldPosition != newPosition || oldRotation != newRotation)
+            {
+                var newLine = string.Format("{0},{1}", newPosition, newRotation);
+                csv.AppendLine(newLine);
+                oldPosition = newPosition;
+                oldRotation = newRotation;
+            }
         }
     }
+
+[ContextMenu("Guardar Csv")]
+public void SaveCSV()
+{
+    if (gameObject.CompareTag("Artro")){
+        File.WriteAllText(Application.dataPath+"/test.csv", csv.ToString());
+    }
+    
+    if (gameObject.CompareTag("Palpa")){
+        File.WriteAllText(Application.dataPath+"/test2.csv", csv.ToString());
+    }
+}
 }

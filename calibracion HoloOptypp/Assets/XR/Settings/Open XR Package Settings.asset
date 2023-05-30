@@ -364,10 +364,10 @@ MonoBehaviour:
   company: Microsoft
   priority: -100
   required: 0
-  m_remoteHostName: 10.8.17.70
+  m_remoteHostName: 10.8.19.37
   m_remoteHostPort: 8265
   m_maxBitrate: 20000
-  m_videoCodec: 0
+  m_videoCodec: 2
   m_enableAudio: 1
 --- !u!114 &-4893288949454300662
 MonoBehaviour:
@@ -509,7 +509,7 @@ MonoBehaviour:
   - {fileID: 86634564687506054}
   - {fileID: -5373765961105193100}
   m_renderMode: 1
-  m_depthSubmissionMode: 2
+  m_depthSubmissionMode: 1
 --- !u!114 &-3384846390002273076
 MonoBehaviour:
   m_ObjectHideFlags: 0

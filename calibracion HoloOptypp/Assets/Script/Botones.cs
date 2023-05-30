@@ -48,7 +48,6 @@ public class Botones : MonoBehaviour
     public GameObject Pantalla1Lv1;
     public GameObject Pantalla2Lv1;
     public GameObject RodillaPosterior;
-    public GameObject decripLV2;
 
 
     public void Dora(string text)
@@ -189,9 +188,6 @@ public class Botones : MonoBehaviour
         Paso1.SetActive(true);
         Pantalla1Lv1.SetActive(false);
         Pantalla2Lv1.SetActive(false);
-        decripLV2.SetActive(true);
-
-
     }
 
 

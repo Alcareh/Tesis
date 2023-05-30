@@ -27,7 +27,7 @@ public class SphereManager : MonoBehaviour {
 
     private Transform selection1;
     private bool status = false;
-    private float tiempo_Final = 1f;
+    private float tiempo_Final = 3f;
 
     [Header("Vector Targets")]
     public List<GameObject> TargetList = new List<GameObject>(new GameObject[17]);
@@ -91,8 +91,8 @@ public class SphereManager : MonoBehaviour {
     [Header("Descricion lv1")]
     public GameObject visualiza1a;
     public GameObject visualiza1b;
-     public GameObject visualiza2a;
-     public GameObject visualiza2b;
+    public GameObject visualiza2a;
+    public GameObject visualiza2b;
 
 
     void Start () {
@@ -153,10 +153,10 @@ public class SphereManager : MonoBehaviour {
                 TareasPracticas[2].SetActive(false);
                 TareasPracticas[3].SetActive(true);
                 MensajePal.SetActive(true);//***************
-                                           // visualiza1a.SetActive(false);
-                                           //visualiza1b.SetActive(false);
-                                           // visualiza2a.SetActive(true);
-                                           // visualiza2b.SetActive(true);
+                visualiza1a.SetActive(false);
+                visualiza1b.SetActive(false);
+                visualiza2a.SetActive(true);
+                visualiza2b.SetActive(true);
 
             }
         }
