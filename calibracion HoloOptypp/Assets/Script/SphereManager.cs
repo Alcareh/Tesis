@@ -94,6 +94,10 @@ public class SphereManager : MonoBehaviour {
     public GameObject visualiza2a;
     public GameObject visualiza2b;
 
+    
+    [Header("Scripts")]
+    public TimerManager timerManager;
+    public TargetManager targetManager;
 
     void Start () {
         tiempo_Transcurrido = 0f;
@@ -366,6 +370,8 @@ public class SphereManager : MonoBehaviour {
             //Cambia color objetivo
             //selectionRenderer.material = nuevo_Color;
             //Desactiva objetivo
+            timerManager.SetLoop(); //Loop del timer?
+            targetManager.ChangeTarget();// Change target counter.
             selection.gameObject.SetActive(false);
             TargetList.RemoveAt(0);
             //Suma uno al contador visual en el canva TMPro type
@@ -394,6 +400,7 @@ public class SphereManager : MonoBehaviour {
             Mira.gameObject.SetActive(false);
             ObjetoMira.material = MaterialMiraOn;
             MiraCompleta.gameObject.SetActive(true);
+            targetManager.AddAttempt(); //Add attempt?
             MiraCompleta.fillAmount = tiempo_Transcurrido / tiempo_Final;
         }
     }

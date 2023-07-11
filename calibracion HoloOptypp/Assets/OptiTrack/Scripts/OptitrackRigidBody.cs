@@ -97,7 +97,7 @@ public class OptitrackRigidBody : MonoBehaviour
             this.transform.localRotation = rbState.Pose.Orientation;
             var newPosition = rbState.Pose.Position.ToString();
             var newRotation = rbState.Pose.Orientation.ToString();
-            if (oldPosition != newPosition || oldRotation != newRotation)
+            if (oldPosition != newPosition || oldRotation != newRotation)// acá debería ir un seguro y cuando ese seguro sea false, que se guarde 0 no ha empezado 1 almacene datos 2 guarde
             {
                 var newLine = string.Format("{0},{1}", newPosition, newRotation);
                 csv.AppendLine(newLine);
@@ -111,11 +111,11 @@ public class OptitrackRigidBody : MonoBehaviour
 public void SaveCSV()
 {
     if (gameObject.CompareTag("Artro")){
-        File.WriteAllText(Application.dataPath+"/test.csv", csv.ToString());
+        File.WriteAllText(Application.dataPath+"/DATA_CSV/ArtroTxt.csv", csv.ToString());
     }
     
     if (gameObject.CompareTag("Palpa")){
-        File.WriteAllText(Application.dataPath+"/test2.csv", csv.ToString());
+        File.WriteAllText(Application.dataPath+"/DATA_CSV/PalpaTxt.csv", csv.ToString());
     }
 }
 }

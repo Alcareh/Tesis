@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: e3f5ccf0f797ca74090c821e9bddad4e
+  - enabled: 1
+    path: Assets/Scenes/Nivel1VisualizaPalpa - copia.unity
+    guid: 570005bcfa007d44fa7b47e23741c623
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c871a412dfe292343b429d68c114de4e, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: fb1fdb6501cd8c748b084da14a3c8bcb, type: 2}
