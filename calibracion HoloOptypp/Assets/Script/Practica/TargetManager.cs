@@ -10,20 +10,24 @@ public class TargetManager : MonoBehaviour
     [SerializeField]   
     public StringBuilder csv= new StringBuilder();
 
+    public bool seguroTarget=true;
     public int intentos = 0;
     public string targetText;
 
 
     public void AddAttempt()
     {
+        seguroTarget = false;
         intentos += 1;
         targetText = (intentos).ToString();
+        Debug.Log("intento:"+targetText);
     }
 
     public void ChangeTarget()
     {
         var newLine = string.Format("{0}", targetText);
         csv.AppendLine(newLine);
+        Debug.Log("Este target quedó con "+targetText+" número de intentos");
         intentos = 0;
         targetText= intentos.ToString();
     }

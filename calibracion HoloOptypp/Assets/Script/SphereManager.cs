@@ -23,7 +23,7 @@ public class SphereManager : MonoBehaviour {
     [SerializeField] private Material ColorBase;
     public Image Mira;
     public Image MiraCompleta;
-    public float tiempo_Transcurrido;
+    public float tiempoMira;
 
     private Transform selection1;
     private bool status = false;
@@ -98,14 +98,10 @@ public class SphereManager : MonoBehaviour {
     [Header("Scripts")]
     public TimerManager timerManager;
     public TargetManager targetManager;
-
-
-    [Header("Seguros")] 
-    public bool seguro1 = true;
-    public bool seguro2 = true;
+    
     
     void Start () {
-        tiempo_Transcurrido = 0f;
+        tiempoMira = 0f;
     }
 	
 	void Update () {
@@ -321,13 +317,13 @@ public class SphereManager : MonoBehaviour {
                 currentHitObject = hit.transform.gameObject;
                 currentHitDistance = hit.distance;
                 var selection = hit.transform;
-                if (selection.CompareTag(Tag) && currentHitObject == TargetList[0] && Palpa == true && seguro1 )
+                if (selection.CompareTag(Tag) && currentHitObject == TargetList[0] && Palpa == true )
                 {
-                    Debug.Log("Tocó objetivo");
+                    //Debug.Log("Tocó objetivo");
                     Encendido();
-                    tiempo_Transcurrido += Time.deltaTime;
+                    tiempoMira += Time.deltaTime;
 
-                    if (tiempo_Transcurrido >= tiempo_Final && Palpa == true)
+                    if (tiempoMira >= tiempo_Final && Palpa == true)
                     {
                         Debug.Log("Tocó objetivo por 3 segundos");
                         Seleccionar(selection);
@@ -360,7 +356,7 @@ public class SphereManager : MonoBehaviour {
     }
     void ResetTimer()
     {
-        tiempo_Transcurrido = 0f;
+        tiempoMira = 0f;
         //Debug.Log("Reiniciando Timer");
     }
 
@@ -403,9 +399,13 @@ public class SphereManager : MonoBehaviour {
             Mira.gameObject.SetActive(false);
             ObjetoMira.material = MaterialMiraOn;
             MiraCompleta.gameObject.SetActive(true);
-            //targetManager.AddAttempt(); //Add attempt? (me toca buscarle un if pq se hace muchas veces)
-            Debug.Log(("Agregando intento xdxd"));
-            MiraCompleta.fillAmount = tiempo_Transcurrido / tiempo_Final;
+            MiraCompleta.fillAmount = tiempoMira / tiempo_Final;
+            
+            if (targetManager.seguroTarget)
+            {
+                targetManager.AddAttempt(); //Add attempt? (me toca buscarle un if pq se hace muchas veces)
+                Debug.Log(("Agregando intento xdxd"));
+            }
         }
     }
 
@@ -414,8 +414,10 @@ public class SphereManager : MonoBehaviour {
         //Elimina el timer de manera gráfica
         ObjetoMira.material = MaterialMiraOf;
         Mira.gameObject.SetActive(true);
-        MiraCompleta.gameObject.SetActive(false);
         MiraCompleta.fillAmount = 0;
+        MiraCompleta.gameObject.SetActive(false);
+
+        targetManager.seguroTarget = true;
     }
 }
 

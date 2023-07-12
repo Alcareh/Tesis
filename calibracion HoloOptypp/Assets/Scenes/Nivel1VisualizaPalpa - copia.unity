@@ -16875,6 +16875,7 @@ MonoBehaviour:
   StreamingClient: {fileID: 0}
   RigidBodyId: 2
   NetworkCompensation: 1
+  seguro: 0
 --- !u!1 &843009958
 GameObject:
   m_ObjectHideFlags: 0
@@ -24216,6 +24217,7 @@ MonoBehaviour:
   StreamingClient: {fileID: 0}
   RigidBodyId: 1
   NetworkCompensation: 1
+  seguro: 0
 --- !u!4 &1188679901
 Transform:
   m_ObjectHideFlags: 0
@@ -26518,6 +26520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b82a57850c40384eb718ee34f9e7dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seguroTarget: 1
   intentos: 0
   targetText: 
 --- !u!4 &1358306675
@@ -43766,10 +43769,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
@@ -43777,7 +43788,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1951457782}
     - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 838986157}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1188679900}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
@@ -43789,11 +43816,35 @@ PrefabInstance:
       value: CambiarSeguro
       objectReference: {fileID: 0}
     - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: CambiarSeguro
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: CambiarSeguro
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: TimerManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: OptitrackRigidBody, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: OptitrackRigidBody, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -48907,7 +48958,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2911970978279225027}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: -1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -48916,7 +48967,7 @@ Transform:
   - {fileID: 1142620461}
   m_Father: {fileID: 1188679901}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 360}
 --- !u!1 &2933091259211960264
 GameObject:
   m_ObjectHideFlags: 0
@@ -49192,7 +49243,7 @@ MonoBehaviour:
   ColorBase: {fileID: 2100000, guid: e0d6f3fd5d1148c4496a44baaa9ee760, type: 2}
   Mira: {fileID: 3025649532914900895}
   MiraCompleta: {fileID: 3025302341374850887}
-  tiempo_Transcurrido: 0
+  tiempoMira: 0
   TargetList:
   - {fileID: 2912857514355390947}
   - {fileID: 2912857513799953465}
@@ -49348,8 +49399,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2913827855836155975}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.015}
-  m_LocalScale: {x: 0.066366, y: 0.066366, z: 0.066366}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 3132069783070969259}
   - {fileID: 3132227824919871291}

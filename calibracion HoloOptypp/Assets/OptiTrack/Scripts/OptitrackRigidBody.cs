@@ -40,6 +40,7 @@ public class OptitrackRigidBody : MonoBehaviour
     
     string oldPosition = "0";
     string oldRotation = "0";
+    public bool seguro=false;
     void Start()
     {
         // If the user didn't explicitly associate a client, find a suitable default.
@@ -97,7 +98,7 @@ public class OptitrackRigidBody : MonoBehaviour
             this.transform.localRotation = rbState.Pose.Orientation;
             var newPosition = rbState.Pose.Position.ToString();
             var newRotation = rbState.Pose.Orientation.ToString();
-            if (oldPosition != newPosition || oldRotation != newRotation)// acá debería ir un seguro y cuando ese seguro sea false, que se guarde 0 no ha empezado 1 almacene datos 2 guarde
+            if ((oldPosition != newPosition || oldRotation != newRotation)&& seguro)// acá debería ir un seguro y cuando ese seguro sea false, deje de guardar
             {
                 var newLine = string.Format("{0},{1}", newPosition, newRotation);
                 csv.AppendLine(newLine);
@@ -105,6 +106,13 @@ public class OptitrackRigidBody : MonoBehaviour
                 oldRotation = newRotation;
             }
         }
+    }
+
+
+    public void CambiarSeguro()
+    {
+        Debug.Log("seguro ha cambiado a true");
+        seguro = true;
     }
 
 [ContextMenu("Guardar Csv")]

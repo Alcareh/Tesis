@@ -42,6 +42,7 @@ public class TimerManager : MonoBehaviour
         //tiempo2.text = tiempo1.text;
         var newLine = string.Format("{0}", timeText);
         csv.AppendLine(newLine);
+        Debug.Log("El tiempo que usó en este target fue: "+timeText);
     }
     
     public void SaveCSV()
