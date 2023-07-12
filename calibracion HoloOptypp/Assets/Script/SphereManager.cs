@@ -320,13 +320,13 @@ public class SphereManager : MonoBehaviour {
                 var selection = hit.transform;
                 if (selection.CompareTag(Tag) && currentHitObject == TargetList[0] && Palpa == true)
                 {
-                    //Debug.Log("Tocó objetivo");
+                    Debug.Log("Tocó objetivo");
                     Encendido();
                     tiempo_Transcurrido += Time.deltaTime;
 
                     if (tiempo_Transcurrido >= tiempo_Final && Palpa == true)
                     {
-                        //Debug.Log("Tocó objetivo por 3 segundos");
+                        Debug.Log("Tocó objetivo por 3 segundos");
                         Seleccionar(selection);
                     }
                 }
@@ -400,7 +400,8 @@ public class SphereManager : MonoBehaviour {
             Mira.gameObject.SetActive(false);
             ObjetoMira.material = MaterialMiraOn;
             MiraCompleta.gameObject.SetActive(true);
-            targetManager.AddAttempt(); //Add attempt?
+            //targetManager.AddAttempt(); //Add attempt? (me toca buscarle un if pq se hace muchas veces)
+            Debug.Log(("Agregando intento xdxd"));
             MiraCompleta.fillAmount = tiempo_Transcurrido / tiempo_Final;
         }
     }
