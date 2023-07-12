@@ -99,6 +99,11 @@ public class SphereManager : MonoBehaviour {
     public TimerManager timerManager;
     public TargetManager targetManager;
 
+
+    [Header("Seguros")] 
+    public bool seguro1 = true;
+    public bool seguro2 = true;
+    
     void Start () {
         tiempo_Transcurrido = 0f;
     }
@@ -114,8 +119,7 @@ public class SphereManager : MonoBehaviour {
     void EscogerTarget()
     {
 
-
-            if (TargetList.Count == 17)
+        if (TargetList.Count == 17)
         {
             if (W == 0)
             {
@@ -191,7 +195,6 @@ public class SphereManager : MonoBehaviour {
                 TareasPracticas[5].SetActive(true);
                 //PalpaSeñal.SetActive(false);****************
                 MensajeFin.SetActive(true);
-                //como esto se llama en update toca es cambiar de escena o hacer algo que pare ese update
                 Debug.Log("Se acabó esto xdxd");
             }
         }
@@ -318,7 +321,7 @@ public class SphereManager : MonoBehaviour {
                 currentHitObject = hit.transform.gameObject;
                 currentHitDistance = hit.distance;
                 var selection = hit.transform;
-                if (selection.CompareTag(Tag) && currentHitObject == TargetList[0] && Palpa == true)
+                if (selection.CompareTag(Tag) && currentHitObject == TargetList[0] && Palpa == true && seguro1 )
                 {
                     Debug.Log("Tocó objetivo");
                     Encendido();
