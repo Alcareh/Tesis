@@ -36,7 +36,7 @@ public class Palpar : MonoBehaviour
         {
             EstaPalpando = false;
             Z += 1;
-            Debug.Log("parlpar update target 2 4aquiii2");
+            //Debug.Log("parlpar update target 2 4aquiii2");
         }
        /* if (Target5.activeSelf == false && Z == 3)
         {
@@ -55,14 +55,14 @@ public class Palpar : MonoBehaviour
         public void OnTriggerEnter()
     {
          EstaPalpando = true;
-        Debug.Log("palpar ontriger enter esta palpando true");
+        //Debug.Log("palpar ontriger enter esta palpando true");
     }
 
     void OnTriggerExit(Collider other)
     {
         // Destroy everything that leaves the trigger
         EstaPalpando = false;
-        Debug.Log(" palpal ontriger exit esta palpando false" );
+        //Debug.Log(" palpal ontriger exit esta palpando false" );
     }
     //void OnTriggerStay(Collider other)
     //{

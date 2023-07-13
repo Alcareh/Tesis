@@ -114,10 +114,12 @@ public class OptitrackRigidBody : MonoBehaviour
         if (seguro)
         {
             seguro = false;
+            Debug.Log("Seguro de "+ gameObject.tag+" es false");
         }
         else
         {
             seguro = true;
+            Debug.Log("Seguro de "+ gameObject.tag+" es true");
         }
         
     }

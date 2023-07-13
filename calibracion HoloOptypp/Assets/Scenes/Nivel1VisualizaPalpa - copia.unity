@@ -16647,8 +16647,60 @@ PrefabInstance:
       value: -0.0007
       objectReference: {fileID: 0}
     - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 838986157}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1188679900}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MensajePalpa
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CambiarSeguro
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: CambiarSeguro
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: OptitrackRigidBody, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: OptitrackRigidBody, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
@@ -22387,10 +22439,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
@@ -22398,7 +22454,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1951457782}
     - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1188679900}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
@@ -22410,11 +22474,23 @@ PrefabInstance:
       value: ResetTimer
       objectReference: {fileID: 0}
     - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: CambiarSeguro
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: TimerManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: OptitrackRigidBody, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111896399665928540, guid: 0b82b37656439f349b38f6934c226c1f, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -28446,7 +28522,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413423595}
   m_LocalRotation: {x: -0.5416752, y: 0.5416752, z: -0.45451948, w: 0.45451948}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.8}
   m_LocalScale: {x: 0.005, y: 0.2, z: 0.005}
   m_Children:
   - {fileID: 341887424}
@@ -49377,6 +49453,7 @@ MonoBehaviour:
   Paso8: {fileID: 1020852217}
   Paso9: {fileID: 2081101265}
   MensajeFinLv2: {fileID: 62233662}
+  seguro: 1
   RodillaRotula: {fileID: 6177884821017739625}
   RodillaCompartimientoMedial: {fileID: 3246746943275318265}
   Rodilla4: {fileID: 8544131892209692238}

@@ -160,7 +160,7 @@ public class SphereManager : MonoBehaviour {
                 contador[2].material = MaterialesContador;
                 TareasPracticas[2].SetActive(false);
                 TareasPracticas[3].SetActive(true);
-                palpadorRigibody.CambiarSeguro();
+                artroscopioRigibody.CambiarSeguro();
                 MensajePal.SetActive(true);//***************
                 visualiza1a.SetActive(false);
                 visualiza1b.SetActive(false);
@@ -196,6 +196,7 @@ public class SphereManager : MonoBehaviour {
                 TareasPracticas[5].SetActive(true);
                 //PalpaSeñal.SetActive(false);****************
                 palpadorRigibody.CambiarSeguro();
+                artroscopioRigibody.CambiarSeguro();
                 MensajeFin.SetActive(true);
             }
         }
@@ -312,7 +313,6 @@ public class SphereManager : MonoBehaviour {
             {
                 Paso9.SetActive(false);
                 contador[8].material = MaterialesContador;
-                Debug.Log("ARTROSCOPIO CAMBIAR SEGURO");
                 artroscopioRigibody.CambiarSeguro();
                 MensajeFinLv2.SetActive(true);
                 seguro = false;
