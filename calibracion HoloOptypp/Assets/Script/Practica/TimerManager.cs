@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
 using System.IO;
+using System.Threading;
 
 public class TimerManager : MonoBehaviour
 {
@@ -37,6 +38,10 @@ public class TimerManager : MonoBehaviour
         seguro = true;
     }
 
+    public void ResetTimer()
+    {
+        time = 0;
+    }
     public void SetLoop()
     {
         //tiempo2.text = tiempo1.text;

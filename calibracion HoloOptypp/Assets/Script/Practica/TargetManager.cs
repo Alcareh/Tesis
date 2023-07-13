@@ -20,7 +20,6 @@ public class TargetManager : MonoBehaviour
         seguroTarget = false;
         intentos += 1;
         targetText = (intentos).ToString();
-        Debug.Log("intento:"+targetText);
     }
 
     public void ChangeTarget()

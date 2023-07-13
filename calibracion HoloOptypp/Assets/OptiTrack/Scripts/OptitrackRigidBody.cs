@@ -111,11 +111,18 @@ public class OptitrackRigidBody : MonoBehaviour
 
     public void CambiarSeguro()
     {
-        Debug.Log("seguro ha cambiado a true");
-        seguro = true;
+        if (seguro)
+        {
+            seguro = false;
+        }
+        else
+        {
+            seguro = true;
+        }
+        
     }
 
-[ContextMenu("Guardar Csv")]
+//[ContextMenu("Guardar Csv")]
 public void SaveCSV()
 {
     if (gameObject.CompareTag("Artro")){

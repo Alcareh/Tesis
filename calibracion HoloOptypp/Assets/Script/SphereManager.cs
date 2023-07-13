@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class SphereManager : MonoBehaviour {
@@ -63,6 +64,7 @@ public class SphereManager : MonoBehaviour {
     public GameObject Paso9;
 
     public GameObject MensajeFinLv2;
+    public bool seguro = true;
 
 
     public static bool Palpa; //*************************************************************************
@@ -98,6 +100,8 @@ public class SphereManager : MonoBehaviour {
     [Header("Scripts")]
     public TimerManager timerManager;
     public TargetManager targetManager;
+    public OptitrackRigidBody palpadorRigibody;
+    public OptitrackRigidBody artroscopioRigibody;
     
     
     void Start () {
@@ -156,6 +160,7 @@ public class SphereManager : MonoBehaviour {
                 contador[2].material = MaterialesContador;
                 TareasPracticas[2].SetActive(false);
                 TareasPracticas[3].SetActive(true);
+                palpadorRigibody.CambiarSeguro();
                 MensajePal.SetActive(true);//***************
                 visualiza1a.SetActive(false);
                 visualiza1b.SetActive(false);
@@ -190,8 +195,8 @@ public class SphereManager : MonoBehaviour {
                 TareasPracticas[4].SetActive(false);
                 TareasPracticas[5].SetActive(true);
                 //PalpaSeñal.SetActive(false);****************
+                palpadorRigibody.CambiarSeguro();
                 MensajeFin.SetActive(true);
-                Debug.Log("Se acabó esto xdxd");
             }
         }
 
@@ -303,9 +308,15 @@ public class SphereManager : MonoBehaviour {
         }
         if (TargetList.Count == 3)
         {
-            Paso9.SetActive(false);
-            contador[8].material = MaterialesContador;
-            MensajeFinLv2.SetActive(true);
+            if (seguro)
+            {
+                Paso9.SetActive(false);
+                contador[8].material = MaterialesContador;
+                Debug.Log("ARTROSCOPIO CAMBIAR SEGURO");
+                artroscopioRigibody.CambiarSeguro();
+                MensajeFinLv2.SetActive(true);
+                seguro = false;
+            }
         }
 
         else
@@ -325,7 +336,7 @@ public class SphereManager : MonoBehaviour {
 
                     if (tiempoMira >= tiempo_Final && Palpa == true)
                     {
-                        Debug.Log("Tocó objetivo por 3 segundos");
+                       // Debug.Log("Tocó objetivo por 3 segundos");
                         Seleccionar(selection);
                     }
                 }
@@ -404,7 +415,6 @@ public class SphereManager : MonoBehaviour {
             if (targetManager.seguroTarget)
             {
                 targetManager.AddAttempt(); //Add attempt? (me toca buscarle un if pq se hace muchas veces)
-                Debug.Log(("Agregando intento xdxd"));
             }
         }
     }
